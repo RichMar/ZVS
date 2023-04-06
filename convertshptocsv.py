@@ -46,8 +46,9 @@ inLayer = inDataSet.GetLayer()
 # loop through the input features
 inFeature = inLayer.GetNextFeature()
 csvfile = open('zastavky-JCK.csv', 'w')
-csvfile.write("lat;lon;okres;name;typ" + "\n")
+csvfile.write("lat;lon;ref;okres;name;stanoviste;typ" + "\n")
 aa = 0
+
 for feature in layer:
     geom = feature.GetGeometryRef()
     geom.Transform(coordTrans)
@@ -61,9 +62,11 @@ for feature in layer:
     okres = feature.GetField("OKRES")
     poplong = feature.GetField("POPIS_LONG")
     stan = feature.GetField("STANOVISTE")
+    if not stan:
+        stan = ""
     typ = feature.GetField("TYP")
     print(geom.Centroid().ExportToWkt() + str(okres) + " " + str(poplong) + " " + str(stan))
-    csvfile.write(lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + typ + "\n")
+    csvfile.write(lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + str(stan) + ";" + typ + "\n")
     aa += 1
 print("Konec - počet řádků: " + str(aa))
 csvfile.close()
