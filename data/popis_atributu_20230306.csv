@@ -1,0 +1,8 @@
+název;datový typ;délka/pøesnost;popis;povolené Null hodnoty
+CISLO_NUM;DOUBLE;38/8;èíselný identifikátor zastávky z CIS/ID vlakové zastávky;ano
+POPIS_LONG;text;255;název zastávky dle CIS/název vlakové zastávky;ano
+stanoviste_poznamka;text;255;èíslo stanovištì èi jiná poznámka;ano
+OBSLUHOVANO;short int;5;hodnota: 0 - neobsluhováno, hodnota 1 - obsluhováno;ano
+okres;text;2;zkratka okresu, ve kterém se zastávka nachází;ano
+typ;text;50;typ zastávky: bus, vlak;ano
+ZPRESNENI_POLOHY;text;255;datum zpøesnìní polohy
