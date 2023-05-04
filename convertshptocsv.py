@@ -46,8 +46,9 @@ inLayer = inDataSet.GetLayer()
 # loop through the input features
 inFeature = inLayer.GetNextFeature()
 csvfile = open('zastavky-JCK.csv', 'w')
-csvfile_vlak = open('zastavky-JCK-vlak.csv', 'w', encoding="Cp1250")
-csvfile_bus = open('zastavky-JCK-bus.csv', 'w', encoding="Cp1250")
+#UTF-8, windows-1250,ISO 8859-2, CP852
+csvfile_vlak = open('zastavky-JCK-vlak.csv', 'w', encoding="CP852")
+csvfile_bus = open('zastavky-JCK-bus.csv', 'w', encoding="CP852")
 csvfile.write("lat;lon;ref;okres;name;stanoviste;typ" + "\n")
 csvfile_vlak.write("lat;lon;ref;okres;name;stanoviste;typ" + "\n")
 csvfile_bus.write("lat;lon;ref;okres;name;stanoviste;typ" + "\n")
