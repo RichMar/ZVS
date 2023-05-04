@@ -1,4 +1,4 @@
-@lat,@lon,official_name,name,ref:CIS_JR,ref,bus,public_transport,@count
+lat,lon,official_name,name,ref:CIS_JR,ref,bus,public_transport,@count
 49.0183339,13.5794727,,Kvilda,,,yes,stop_position,
 48.9955202,13.6546463,,"""Borová Lada, Svinná Lada""",,,yes,stop_position,
 48.9469929,13.7151380,,Polka,,,,,
