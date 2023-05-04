@@ -46,7 +46,11 @@ inLayer = inDataSet.GetLayer()
 # loop through the input features
 inFeature = inLayer.GetNextFeature()
 csvfile = open('zastavky-JCK.csv', 'w')
+csvfile_vlak = open('zastavky-JCK-vlak.csv', 'w')
+csvfile_bus = open('zastavky-JCK-busk.csv', 'w')
 csvfile.write("lat;lon;ref;okres;name;stanoviste;typ" + "\n")
+csvfile_vlak.write("lat;lon;ref;okres;name;stanoviste;typ" + "\n")
+csvfile_bus.write("lat;lon;ref;okres;name;stanoviste;typ" + "\n")
 aa = 0
 
 for feature in layer:
@@ -67,6 +71,13 @@ for feature in layer:
     typ = feature.GetField("TYP")
     print(geom.Centroid().ExportToWkt() + str(okres) + " " + str(poplong) + " " + str(stan))
     csvfile.write(lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + str(stan) + ";" + typ + "\n")
+    if typ == "bus":
+        csvfile_bus.write(lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + str(stan) + ";" + typ + "\n")
+    elif typ == "vlak":
+        csvfile_vlak.write(
+            lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + str(stan) + ";" + typ + "\n")
     aa += 1
 print("Konec - počet řádků: " + str(aa))
 csvfile.close()
+csvfile_vlak.close()
+csvfile_bus.close()
