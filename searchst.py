@@ -22,6 +22,8 @@ csvfile = 'zastavky-JCK-bus.csv'
 seznam_st = []
 uzel=[]
 csv_reader_kopie = []
+chybejicisinglzast = [[] for i in range(4)]
+chybejicisinglzast_list = []
 overpass_url = "http://overpass-api.de/api/interpreter"
 overpass_query = """[out:csv(::lat, ::lon, "official_name", name, "ref:CIS_JR", "ref", "bus", "public_transport",
  ::count, ::id)]; \n ( \n"""
@@ -62,16 +64,43 @@ if os.path.exists(csvfile):
     #     csv_reader_kopie.append(y)
 
 #https://stackoverflow.com/questions/11150155/why-cant-i-repeat-the-for-loop-for-csv-reader
-
+    n = 0
     for x in zastavkykraj:
         # print("x:" + str(x))
         if ("lat" and "ref") not in x:
             ref = x[2]
-            print('ref: ' + str(ref))
+            # print('ref: ' + str(ref))
             index_zast = [(i, element.index(ref)) for i, element in enumerate(zastavkykraj) if ref in element]
-            print('index_zast: ' + str(index_zast))
+            # print('index_zast: ' + str(index_zast))
+            if len(index_zast) == 1:
+                ind = index_zast[0][0]
+                lat = zastavkykraj[index_zast[0][0]][0]
+                lon = zastavkykraj[index_zast[0][0]][1]
+                oficialname = zastavkykraj[index_zast[0][0]][4]
+                ref = zastavkykraj[index_zast[0][0]][2]
+                for xx in data:
+                    if "lat" not in str(xx) and not xx[0] == "":
+                        vzd = get_distance(float(lat), float(lon), float(xx[0]), float(xx[1]))
+                        if vzd < 0.025:
+                            n += 1
+                            # porovná názvy zastávek a 0 neshodují se, 1 shodují se
+                            s = difflib.SequenceMatcher(None, xx[3], oficialname)
+                            similarity = s.ratio()
+                            print(str(n) + ": " + str(vzd) + "---: " + str(lat) + "," + str(lon) + ": OSM name: " +
+                                  xx[3] + "-----Official name: " + oficialname + " =" + str(similarity))
+                        else:
 
+                            chybejicisinglzast[0] = []
+                            chybejicisinglzast[0].append(lat)
+                            chybejicisinglzast[1] = []
+                            chybejicisinglzast[1].append(lon)
+                            chybejicisinglzast[2] = []
+                            chybejicisinglzast[2].append(ref)
+                            chybejicisinglzast[3] = []
+                            chybejicisinglzast[3].append(oficialname)
 
+                            chybejicisinglzast_list.append(chybejicisinglzast)
+print("konec")
     # for x in csv_reader:
 #     if "lat" not in x:
 #         for y in data:
