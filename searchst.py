@@ -6,6 +6,7 @@ from itertools import count # izip for maximum efficiency
 from copy import deepcopy
 import difflib
 
+bodydoplnkey = []
 def get_distance(lat_1, lng_1, lat_2, lng_2):  # vypocet vzdalenosti bodu
     lng_1, lat_1, lng_2, lat_2 = map(radians, [lng_1, lat_1, lng_2, lat_2])  # prevede uhly na radiany
     d_lat = lat_2 - lat_1
@@ -15,6 +16,15 @@ def get_distance(lat_1, lng_1, lat_2, lng_2):  # vypocet vzdalenosti bodu
     r = 6371
     return c * r
 
+def get_keys (bod_od, bod_osm):
+    # OSM: ::lat, ::lon, "official_name", name, "ref:CIS_JR", "ref", "bus", "public_transport",::count, ::id)
+    # od:
+    i = 0
+    for x in bod_osm[2:]:
+        if not x == "":
+            if x in bod_od:
+                radek = x
+        i += 1
 
   # area[name="Jihočeský kraj"];
   # node(area)["highway"="bus_stop"];
@@ -112,7 +122,10 @@ if os.path.exists(csvfile):
                                 print("dd: " + str(dd))
                                 problemovazast.append(x)
 
+                            get_keys(x, xx)
+
                         else:
+                            # zapíše zastávky z oficiálího seznamu, které nejsou v OSM
                             if g == 0:
                                 chybejicisinglzast = [[] for i in range(4)]
                                 chybejicisinglzast[0] = []
