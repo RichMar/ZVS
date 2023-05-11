@@ -150,7 +150,7 @@ if os.path.exists(csvfile):
                                     if similarity < 0.11:
                                         problemovazast.append(x)
                                 if dd > 2:
-                                    # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak jedna zastavvky v OSM
+                                    # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak dve zastavvky v OSM
                                     print("dd: " + str(dd))
                                     problemovazast.append(x)
                             else:
