@@ -69,7 +69,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata):
                         s = difflib.SequenceMatcher(None, xx[2], oficialname)
                         similarity = s.ratio()
 
-                    print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + ": OSM name: " +
+                    print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
                           xx[3] + "-----Official name: " + oficialname + " =" + str(similarity))
                     if similarity < 0.11:
                         problemovazast.append(dx)
