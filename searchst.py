@@ -16,15 +16,92 @@ def get_distance(lat_1, lng_1, lat_2, lng_2):  # vypocet vzdalenosti bodu
     r = 6371
     return c * r
 
-def get_keys (bod_od, bod_osm):
-    # OSM: ::lat, ::lon, "official_name", name, "ref:CIS_JR", "ref", "bus", "public_transport",::count, ::id)
-    # od:
-    i = 0
+
+problemovybodosm = []
+
+
+def get_keys(bod_od, bod_osm, porov):
+    # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id)
+    # bod_od: 0)lat	1)lon	2)ref	3)okres	4)name	5)stanoviste	6)typ
+    # https://output.jsbin.com/xewohok
+    # element;id;official_name;ref:CIS_JR;bus
+    i = 2
+    jm = ""
+    refe = ""
     for x in bod_osm[2:]:
-        if not x == "":
-            if x in bod_od:
-                radek = x
+        # official name
+        if i == 2 and not x == "":
+            if not x == bod_od[4] and porov < 0.6:
+                problemovybodosm.append(x)
+            else:
+                jm = bod_od[4]
+        elif i == 2 and x == "":
+            jm = bod_od[4]
+        # ref
+        if i == 4 and not x == "":
+            if not x == bod_od[2]:
+                problemovybodosm.append(x)
+            else:
+                refe = ""
+        elif i == 4 and x == "":
+            refe = bod_od[2]
+
         i += 1
+
+        edittag = "node;" + bod_osm[9] + ";" + jm + ";" + refe
+    return edittag
+
+
+def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata):
+    ddd = 0
+    ddn = dn
+    for xx in ddata:
+        if "lat" not in str(xx) and not xx[0] == "":
+            vzd = get_distance(float(dlat), float(dlon), float(xx[0]), float(xx[1]))
+            if vzd < limvzd:
+                ddd += 1
+                ddn += 1
+                # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
+                if not xx[3] == "" or not xx[2] == "":
+                    s = difflib.SequenceMatcher(None, xx[3], oficialname)
+                    similarity = s.ratio()
+                    if similarity < 0.6 and not xx[2] == "":
+                        s = difflib.SequenceMatcher(None, xx[2], oficialname)
+                        similarity = s.ratio()
+
+                    print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + ": OSM name: " +
+                          xx[3] + "-----Official name: " + oficialname + " =" + str(similarity))
+                    if similarity < 0.11:
+                        problemovazast.append(dx)
+                    # else:
+                    #     print("kuku")
+                else:
+                    similarity = 0
+
+                if ddd > pocetz:
+                    # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak jedna zastavvky v OSM
+                    print("dd: " + str(ddd))
+                    problemovazast.append(dx)
+                radek = get_keys(dx, xx, float(similarity))
+                josm.append(radek)
+
+            else:
+                # zapíše zastávky z oficiálího seznamu, které nejsou v OSM
+                if dg == 0:
+                    chybejicisinglzast = [[] for i in range(4)]
+                    chybejicisinglzast[0] = []
+                    chybejicisinglzast[0].append(lat)
+                    chybejicisinglzast[1] = []
+                    chybejicisinglzast[1].append(lon)
+                    chybejicisinglzast[2] = []
+                    chybejicisinglzast[2].append(ref)
+                    chybejicisinglzast[3] = []
+                    chybejicisinglzast[3].append(oficialname)
+
+                    chybejicisinglzast_list.append(chybejicisinglzast[:])
+                    dg = 1
+    return ddn
+
 
   # area[name="Jihočeský kraj"];
   # node(area)["highway"="bus_stop"];
@@ -37,7 +114,7 @@ csv_reader_kopie = []
 chybejicisinglzast = [[] for i in range(4)]
 chybejicisinglzast_list = []
 problemovazast = []
-
+josm = []
 
 # konstanty
 overpass_url = "http://overpass-api.de/api/interpreter"
@@ -99,46 +176,56 @@ if os.path.exists(csvfile):
                 lon = zastavkykraj[index_zast[0][0]][1]
                 oficialname = zastavkykraj[index_zast[0][0]][4]
                 ref = zastavkykraj[index_zast[0][0]][2]
-                dd = 0
-                for xx in data:
-                    if "lat" not in str(xx) and not xx[0] == "":
-                        vzd = get_distance(float(lat), float(lon), float(xx[0]), float(xx[1]))
-                        if vzd < 0.025:
-                            dd += 1
-                            n += 1
-                            # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
-                            if not xx[3] == "":
-                                s = difflib.SequenceMatcher(None, xx[3], oficialname)
-                                similarity = s.ratio()
-                                print(str(n) + ": " + str(vzd) + "---: " + str(lat) + "," + str(lon) + ": OSM name: " +
-                                      xx[3] + "-----Official name: " + oficialname + " =" + str(similarity))
-                                if similarity < 0.11:
-                                    problemovazast.append(x)
-                                # else:
-                                #     print("kuku")
+                n = tridit(lat, lon, 0.025, x, n, g, 1, data)
 
-                            if dd > 1:
-                                # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak jedna zastavvky v OSM
-                                print("dd: " + str(dd))
-                                problemovazast.append(x)
-
-                            get_keys(x, xx)
-
-                        else:
-                            # zapíše zastávky z oficiálího seznamu, které nejsou v OSM
-                            if g == 0:
-                                chybejicisinglzast = [[] for i in range(4)]
-                                chybejicisinglzast[0] = []
-                                chybejicisinglzast[0].append(lat)
-                                chybejicisinglzast[1] = []
-                                chybejicisinglzast[1].append(lon)
-                                chybejicisinglzast[2] = []
-                                chybejicisinglzast[2].append(ref)
-                                chybejicisinglzast[3] = []
-                                chybejicisinglzast[3].append(oficialname)
-
-                                chybejicisinglzast_list.append(chybejicisinglzast[:])
-                                g = 1
+                # dd = 0
+                # for xx in data:
+                #
+                #     if "lat" not in str(xx) and not xx[0] == "":
+                #         vzd = get_distance(float(lat), float(lon), float(xx[0]), float(xx[1]))
+                #         if vzd < 0.025:
+                #             dd += 1
+                #             n += 1
+                #             # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
+                #             if not xx[3] == "" or not xx[2] == "":
+                #                 s = difflib.SequenceMatcher(None, xx[3], oficialname)
+                #                 similarity = s.ratio()
+                #                 if similarity < 0.6 and not xx[2] == "":
+                #                     s = difflib.SequenceMatcher(None, xx[2], oficialname)
+                #                     similarity = s.ratio()
+                #
+                #                 print(str(n) + ": " + str(vzd) + "---: " + str(lat) + "," + str(lon) + ": OSM name: " +
+                #                       xx[3] + "-----Official name: " + oficialname + " =" + str(similarity))
+                #                 if similarity < 0.11:
+                #                     problemovazast.append(x)
+                #                 # else:
+                #                 #     print("kuku")
+                #             else:
+                #                 similarity = 0
+                #
+                #             if dd > 1:
+                #                 # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak jedna zastavvky v OSM
+                #                 print("dd: " + str(dd))
+                #                 problemovazast.append(x)
+                #             radek = get_keys(x, xx, float(similarity))
+                #             josm.append(radek)
+                #
+                #         else:
+                #             # zapíše zastávky z oficiálího seznamu, které nejsou v OSM
+                #             if g == 0:
+                #                 chybejicisinglzast = [[] for i in range(4)]
+                #                 chybejicisinglzast[0] = []
+                #                 chybejicisinglzast[0].append(lat)
+                #                 chybejicisinglzast[1] = []
+                #                 chybejicisinglzast[1].append(lon)
+                #                 chybejicisinglzast[2] = []
+                #                 chybejicisinglzast[2].append(ref)
+                #                 chybejicisinglzast[3] = []
+                #                 chybejicisinglzast[3].append(oficialname)
+                #
+                #                 chybejicisinglzast_list.append(chybejicisinglzast[:])
+                #                 g = 1
+                    # dlat, dlon, limvzd, dx, dxx, ddd, dn
             elif len(index_zast) == 2:
 
                 for ii in index_zast:
@@ -147,39 +234,49 @@ if os.path.exists(csvfile):
                     lon = zastavkykraj[ii[0]][1]
                     oficialname = zastavkykraj[ii[0]][4]
                     ref = zastavkykraj[ii[0]][2]
-                    dd = 0
-                    for xx in data:
-                        if "lat" not in str(xx) and not xx[0] == "":
-                            vzd = get_distance(float(lat), float(lon), float(xx[0]), float(xx[1]))
-                            if vzd < 0.010:
-                                dd += 1
-                                n += 1
-                                # porovná názvy zastávek a 0 neshodují se, 1 shodují se
-                                if not xx[3] == "":
-                                    s = difflib.SequenceMatcher(None, xx[3], oficialname)
-                                    similarity = s.ratio()
-                                    print(str(n) + ": " + str(vzd) + "---: " + str(lat) + "," + str(lon) + ": OSM name: " +
-                                          xx[3] + "-----Official name: " + oficialname + " =" + str(similarity))
-                                    if similarity < 0.11:
-                                        problemovazast.append(x)
-                                if dd > 2:
-                                    # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak dve zastavvky v OSM
-                                    print("dd: " + str(dd))
-                                    problemovazast.append(x)
-                            else:
-                                if g == 0:
-                                    chybejicisinglzast = [[] for i in range(4)]
-                                    chybejicisinglzast[0] = []
-                                    chybejicisinglzast[0].append(lat)
-                                    chybejicisinglzast[1] = []
-                                    chybejicisinglzast[1].append(lon)
-                                    chybejicisinglzast[2] = []
-                                    chybejicisinglzast[2].append(ref)
-                                    chybejicisinglzast[3] = []
-                                    chybejicisinglzast[3].append(oficialname)
-
-                                    chybejicisinglzast_list.append(chybejicisinglzast[:])
-                                    g = 1
+                    n = tridit(lat, lon, 0.010, x, n, g, 2, data)
+                    # dd = 0
+                    # for xx in data:
+                    #
+                    #     if "lat" not in str(xx) and not xx[0] == "":
+                    #         vzd = get_distance(float(lat), float(lon), float(xx[0]), float(xx[1]))
+                    #         if vzd < 0.010:
+                    #             dd += 1
+                    #             n += 1
+                    #             # porovná názvy zastávek a 0 neshodují se, 1 shodují se
+                    #             if not xx[3] == '' or not xx[2] == "":
+                    #                 s = difflib.SequenceMatcher(None, xx[3], oficialname)
+                    #                 similarity = s.ratio()
+                    #                 if similarity < 0.6 and not xx[2] == "":
+                    #                     s = difflib.SequenceMatcher(None, xx[2], oficialname)
+                    #                     similarity = s.ratio()
+                    #                 print(str(n) + ": " + str(vzd) + "---: " + str(lat) + "," + str(lon) + ": OSM name: " +
+                    #                       xx[3] + "-----Official name: " + oficialname + " =" + str(similarity))
+                    #                 if similarity < 0.11:
+                    #                     problemovazast.append(x)
+                    #             else:
+                    #                 similarity = 0
+                    #
+                    #             if dd > 2:
+                    #                 # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak dve zastavvky v OSM
+                    #                 print("dd: " + str(dd))
+                    #                 problemovazast.append(x)
+                    #             radek = get_keys(x, xx, float(similarity))
+                    #             josm.append(radek)
+                    #         else:
+                    #             if g == 0:
+                    #                 chybejicisinglzast = [[] for i in range(4)]
+                    #                 chybejicisinglzast[0] = []
+                    #                 chybejicisinglzast[0].append(lat)
+                    #                 chybejicisinglzast[1] = []
+                    #                 chybejicisinglzast[1].append(lon)
+                    #                 chybejicisinglzast[2] = []
+                    #                 chybejicisinglzast[2].append(ref)
+                    #                 chybejicisinglzast[3] = []
+                    #                 chybejicisinglzast[3].append(oficialname)
+                    #
+                    #                 chybejicisinglzast_list.append(chybejicisinglzast[:])
+                    #                 g = 1
 
 print("konec")
     # for x in csv_reader:
