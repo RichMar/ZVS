@@ -5,8 +5,14 @@ import csv
 from itertools import count # izip for maximum efficiency
 from copy import deepcopy
 import difflib
+from termcolor import colored
+from collections import Counter
+
+import pandas as pd
+import numpy as np
 
 bodydoplnkey = []
+edittag = [[] for i in range(4)]
 def get_distance(lat_1, lng_1, lat_2, lng_2):  # vypocet vzdalenosti bodu
     lng_1, lat_1, lng_2, lat_2 = map(radians, [lng_1, lat_1, lng_2, lat_2])  # prevede uhly na radiany
     d_lat = lat_2 - lat_1
@@ -48,8 +54,39 @@ def get_keys(bod_od, bod_osm, porov):
 
         i += 1
 
-        edittag = "node;" + bod_osm[9] + ";" + jm + ";" + refe
+        # edittag = "node;" + bod_osm[9] + ";" + jm + ";" + refe
+        # edittag[0] = "node"
+        # edittag[1] = bod_osm[9]
+        # edittag[2] = jm
+        # edittag[3] = refe
+    edittag = [[] for i in range(4)]
+    edittag[0].append("node")
+    edittag[1].append(bod_osm[9])
+    edittag[2].append(jm)
+    edittag[3].append(refe)
+
     return edittag
+
+
+def deduplicate(a, clen):
+    """
+    Clears Empty ip address records from list
+    removes duplicates by
+    :param a:
+    :return:
+    """
+
+    source_ips = []
+    new_list = []
+    for i in range(len(a)):
+        if a[i][clen] != None:
+            if a[i][clen] not in source_ips and clen == 0 and a[i][2] not in source_ips:
+                source_ips.append(a[i][clen])
+                new_list.append(a[i])
+            elif a[i][clen] not in source_ips and clen == 1:
+                source_ips.append(a[i][clen])
+                new_list.append(a[i])
+    return new_list
 
 
 def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata):
@@ -62,6 +99,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata):
                 ddd += 1
                 ddn += 1
                 # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
+                # name 3 a official name 2
                 if not xx[3] == "" or not xx[2] == "":
                     s = difflib.SequenceMatcher(None, xx[3], oficialname)
                     similarity = s.ratio()
@@ -73,17 +111,19 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata):
                           xx[3] + "-----Official name: " + oficialname + " =" + str(similarity))
                     if similarity < 0.11:
                         problemovazast.append(dx)
-                    # else:
+                    else:
+                        radek = get_keys(dx, xx, float(similarity))
+                        josm.append(radek)
+
                     #     print("kuku")
                 else:
                     similarity = 0
 
                 if ddd > pocetz:
                     # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak jedna zastavvky v OSM
-                    print("dd: " + str(ddd))
+                    print(colored("dd: " + str(ddd) + ": " + str(xx[0]) + "," + str(xx[1]), "red"))
                     problemovazast.append(dx)
-                radek = get_keys(dx, xx, float(similarity))
-                josm.append(radek)
+
 
             else:
                 # zapíše zastávky z oficiálího seznamu, které nejsou v OSM
@@ -100,9 +140,48 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata):
 
                     chybejicisinglzast_list.append(chybejicisinglzast[:])
                     dg = 1
+
+                    #
+                    # if ddn > 100:
+                    #     bezdupl_list = deduplicate(chybejicisinglzast_list, 0)
+                    #     bezdupl_josm = deduplicate(josm, 1)
+                    #     print("Total items in original josm :", len(josm))
+                    #     print("Total items after deduplication bezdupl_josm:", len(bezdupl_josm))
+                    #     print("Total items in original chybejicisinglzast_list :", len(chybejicisinglzast_list))
+                    #     print("Total items after deduplication bezdupl_list:", len(bezdupl_list))
+
+                        # df = pd.DataFrame(data=chybejicisinglzast_list,
+                        #                   columns=['lat', 'lon', 'ref',  "name"], dtype='string')
+                        # df = pd.Series(data=chybejicisinglzast_list)
+                        # before = df.dtypes
+                        # df[:].astype('string')
+                        # after = df.dtypes
+
+
+
+                        # df.iloc[df.astype('string').drop_duplicates().index]
+                        # df.iloc[df.drop_duplicates().index]
+                        # df.drop_duplicates(keep='first')
+
+                        # set(tuple(element) for element in chybejicisinglzast_list)
+                        # [list(t) for t in set(tuple(element) for element in chybejicisinglzast_list)]
+                        # *y, = map(list, {*map(tuple, chybejicisinglzast_list)})
+                        # print(y)
+
+
     return ddn
 
-
+# def removedup(duplicate):
+#     final_list = []
+#     found = set([])
+#     for num in duplicate:
+#         lst = []
+#         for element in num:
+#             if element not in found:
+#                 found.add(element)
+#                 lst.append(element)
+#         final_list.append(lst)
+#     return final_list
   # area[name="Jihočeský kraj"];
   # node(area)["highway"="bus_stop"];
 
@@ -140,6 +219,10 @@ with open('OSMzastavkyJCK.csv', 'w', newline='', encoding="utf8") as f:
 m = sum(1 for line in data)
 print(str(m))
 # vytvoří list s daty z OSM
+tisk = 0
+tisky = 0
+tiskb = 0
+tiskg = 0
 for x in data:
 
     if "lat" not in str(x) and not x[0] == "":
@@ -161,7 +244,9 @@ if os.path.exists(csvfile):
 #https://stackoverflow.com/questions/11150155/why-cant-i-repeat-the-for-loop-for-csv-reader
     n = 0
     iterace = 0
+
     for x in zastavkykraj:
+        tisk = 1
         g = 0
         # print("iterace:" + str(iterace))
         iterace += 1
@@ -171,6 +256,12 @@ if os.path.exists(csvfile):
             index_zast = [(i, element.index(ref)) for i, element in enumerate(zastavkykraj) if ref in element]
             # print('index_zast: ' + str(index_zast))
             if len(index_zast) == 1:
+                if tisk == 1 and tiskb == 0:
+                    print(colored("Zastávka s jedinečným", "blue"))
+                    tisk = 0
+                    tiskb = 1
+                    tisky = 0
+                    tiskg = 0
                 ind = index_zast[0][0]
                 lat = zastavkykraj[index_zast[0][0]][0]
                 lon = zastavkykraj[index_zast[0][0]][1]
@@ -227,7 +318,12 @@ if os.path.exists(csvfile):
                 #                 g = 1
                     # dlat, dlon, limvzd, dx, dxx, ddd, dn
             elif len(index_zast) == 2:
-
+                if tisk == 1 and tisky == 0:
+                    print(colored("Dvě zastávky se stejným ref", "yellow"))
+                    tisk = 0
+                    tiskb = 0
+                    tisky=1
+                    tiskg=0
                 for ii in index_zast:
                     ind = ii
                     lat = zastavkykraj[ii[0]][0]
@@ -277,6 +373,38 @@ if os.path.exists(csvfile):
                     #
                     #                 chybejicisinglzast_list.append(chybejicisinglzast[:])
                     #                 g = 1
+            elif len(index_zast) > 2:
+                if tisk == 1 and tiskg == 0:
+                    print(colored(str(len(index_zast)) + " zastávky se stejným ref. Ref: " + str(ref), "green"))
+                    tisk = 0
+                    tiskb = 0
+                    tisky = 0
+                    tiskg = 1
+                for ii in index_zast:
+                        ind = ii
+                        lat = zastavkykraj[ii[0]][0]
+                        lon = zastavkykraj[ii[0]][1]
+                        oficialname = zastavkykraj[ii[0]][4]
+                        ref = zastavkykraj[ii[0]][2]
+                        n = tridit(lat, lon, 0.010, x, n, g, len(index_zast), data)
+# res_chybejicisinglzast_list = list(set(chybejicisinglzast_list))
+# kuku = removedup(chybejicisinglzast_list)
+# counts = Counter(row[0] for row in chybejicisinglzast_list)
+# chybejicisinglzast_list = [row for row in chybejicisinglzast_list if counts[row[0]] == 1]
+# df = pd.DataFrame(chybejicisinglzast_list, columns=['lat', 'lon', 'ref', 'okres', "name", 'stanoviste', 'typ'])
+# df.drop_duplicates()
+
+# v základním seznamu existují duplicitnízastávky podle souřadnic cca 38, nutno zohlednit i ref
+bezdupl_list = deduplicate(chybejicisinglzast_list, 0)
+bezdupl_josm = deduplicate(josm, 1)
+
+print("Total items in original chybejicisinglzast_list :", len(chybejicisinglzast_list))
+print("Total items after deduplication bezdupl_list:", len(bezdupl_list))
+print("Total items in original josm :", len(josm))
+print("Total items after deduplication bezdupl_josm:", len(bezdupl_josm))
+print("Ahoj")
+
+
 
 print("konec")
     # for x in csv_reader:
