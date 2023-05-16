@@ -26,7 +26,7 @@ def get_distance(lat_1, lng_1, lat_2, lng_2):  # vypocet vzdalenosti bodu
 problemovybodosm = []
 
 
-def get_keys(bod_od, bod_osm, porov):
+def get_keys(bod_od, bod_osm, porov, dstan):
     # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id)
     # bod_od: 0)lat	1)lon	2)ref	3)okres	4)name	5)stanoviste	6)typ
     # https://output.jsbin.com/xewohok
@@ -37,8 +37,9 @@ def get_keys(bod_od, bod_osm, porov):
     for x in bod_osm[2:]:
         # official name
         if i == 2 and not x == "":
-            if not x == bod_od[4] and porov < 0.6:
-                problemovybodosm.append(x)
+            if not x == bod_od[4] and porov < 0.11:
+                # name
+                problemovybodosm.append(bod_osm)
             else:
                 jm = bod_od[4]
         elif i == 2 and x == "":
@@ -46,12 +47,18 @@ def get_keys(bod_od, bod_osm, porov):
         # ref
         if i == 4 and not x == "":
             if not x == bod_od[2]:
-                problemovybodosm.append(x)
+                problemovybodosm.append(bod_osm)
             else:
                 refe = ""
         elif i == 4 and x == "":
             refe = bod_od[2]
 
+        # stanoviste
+        if i == 3 and not x == "" and not dstan == "":
+            if not x == bod_od[5]:
+                problemovybodosm.append(bod_osm)
+            else:
+                jm = bod_od[5]
         i += 1
 
         # edittag = "node;" + bod_osm[9] + ";" + jm + ";" + refe
@@ -89,7 +96,7 @@ def deduplicate(a, clen):
     return new_list
 
 
-def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata):
+def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan):
     ddd = 0
     ddn = dn
     for xx in ddata:
@@ -103,21 +110,25 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata):
                 if not xx[3] == "" or not xx[2] == "":
                     s = difflib.SequenceMatcher(None, xx[3], oficialname)
                     similarity = s.ratio()
-                    if similarity < 0.6 and not xx[2] == "":
+                    if 0.11 <= similarity < 0.6 and not xx[2] == "":
                         s = difflib.SequenceMatcher(None, xx[2], oficialname)
                         similarity = s.ratio()
 
-                    print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
+                        print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
                           xx[3] + "-----Official name: " + oficialname + " =" + str(similarity))
-                    if similarity < 0.11:
-                        problemovazast.append(dx)
+
+                        radek = get_keys(dx, xx, float(similarity), dstan)
+                        josm.append(radek)
+                    elif similarity < 0.11:
+                         problemovazast.append(dx)
                     else:
-                        radek = get_keys(dx, xx, float(similarity))
+                        radek = get_keys(dx, xx, float(similarity), dstan)
                         josm.append(radek)
 
                     #     print("kuku")
                 else:
-                    similarity = 0
+                    radek = get_keys(dx, xx, 0, dstan)
+                    josm.append(radek)
 
                 if ddd > pocetz:
                     # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak jedna zastavvky v OSM
@@ -170,6 +181,15 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata):
 
 
     return ddn
+
+
+def tisk_csv(file, name):
+    with open(name + ".csv", 'w', newline='') as f:
+        writer = csv.writer(f, delimiter=";")
+        writer.writerow(['lat', 'lon', 'ref'])
+        writer.writerows(file)
+
+    return
 
 # def removedup(duplicate):
 #     final_list = []
@@ -246,18 +266,19 @@ if os.path.exists(csvfile):
     iterace = 0
 
     for x in zastavkykraj:
-        tisk = 1
+        stan = ""
         g = 0
+        tisk = 1
         # print("iterace:" + str(iterace))
         iterace += 1
-        if ("lat" and "ref") not in x:
+        if ("lat" or "ref") not in x:
             ref = x[2]
             # print('ref: ' + str(ref))
             index_zast = [(i, element.index(ref)) for i, element in enumerate(zastavkykraj) if ref in element]
             # print('index_zast: ' + str(index_zast))
             if len(index_zast) == 1:
                 if tisk == 1 and tiskb == 0:
-                    print(colored("Zastávka s jedinečným", "blue"))
+                    print(colored("Zastávka s jedinečnou ref hodnotou. Ref: " + str(ref), "blue"))
                     tisk = 0
                     tiskb = 1
                     tisky = 0
@@ -267,7 +288,8 @@ if os.path.exists(csvfile):
                 lon = zastavkykraj[index_zast[0][0]][1]
                 oficialname = zastavkykraj[index_zast[0][0]][4]
                 ref = zastavkykraj[index_zast[0][0]][2]
-                n = tridit(lat, lon, 0.025, x, n, g, 1, data)
+                stan = ""
+                n = tridit(lat, lon, 0.025, x, n, g, 1, data, stan)
 
                 # dd = 0
                 # for xx in data:
@@ -319,18 +341,19 @@ if os.path.exists(csvfile):
                     # dlat, dlon, limvzd, dx, dxx, ddd, dn
             elif len(index_zast) == 2:
                 if tisk == 1 and tisky == 0:
-                    print(colored("Dvě zastávky se stejným ref", "yellow"))
+                    print(colored("Dvě zastávky se stejným ref. Ref: " + str(ref), "yellow"))
                     tisk = 0
                     tiskb = 0
-                    tisky=1
-                    tiskg=0
+                    tisky = 1
+                    tiskg = 0
                 for ii in index_zast:
                     ind = ii
                     lat = zastavkykraj[ii[0]][0]
                     lon = zastavkykraj[ii[0]][1]
                     oficialname = zastavkykraj[ii[0]][4]
                     ref = zastavkykraj[ii[0]][2]
-                    n = tridit(lat, lon, 0.010, x, n, g, 2, data)
+                    stan = ""
+                    n = tridit(lat, lon, 0.010, x, n, g, 2, data, stan)
                     # dd = 0
                     # for xx in data:
                     #
@@ -386,7 +409,8 @@ if os.path.exists(csvfile):
                         lon = zastavkykraj[ii[0]][1]
                         oficialname = zastavkykraj[ii[0]][4]
                         ref = zastavkykraj[ii[0]][2]
-                        n = tridit(lat, lon, 0.010, x, n, g, len(index_zast), data)
+                        stan = zastavkykraj[ii[0]][5]
+                        n = tridit(lat, lon, 0.010, x, n, g, len(index_zast), data, stan)
 # res_chybejicisinglzast_list = list(set(chybejicisinglzast_list))
 # kuku = removedup(chybejicisinglzast_list)
 # counts = Counter(row[0] for row in chybejicisinglzast_list)
@@ -397,15 +421,18 @@ if os.path.exists(csvfile):
 # v základním seznamu existují duplicitnízastávky podle souřadnic cca 38, nutno zohlednit i ref
 bezdupl_list = deduplicate(chybejicisinglzast_list, 0)
 bezdupl_josm = deduplicate(josm, 1)
+bezdupl_problemovazast = deduplicate(problemovazast, 0)
+bezdupl_problemovybodosm = deduplicate(problemovybodosm, 0)
 
 print("Total items in original chybejicisinglzast_list :", len(chybejicisinglzast_list))
 print("Total items after deduplication bezdupl_list:", len(bezdupl_list))
 print("Total items in original josm :", len(josm))
 print("Total items after deduplication bezdupl_josm:", len(bezdupl_josm))
 print("Ahoj")
-
-
-
+tisk_csv(bezdupl_list, "bezdupl_list")
+tisk_csv(bezdupl_josm, "bezdupl_josm")
+tisk_csv(bezdupl_problemovazast, "problemovazast")
+tisk_csv(bezdupl_problemovybodosm, "problemovybodosm")
 print("konec")
     # for x in csv_reader:
 #     if "lat" not in x:
