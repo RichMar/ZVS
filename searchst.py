@@ -66,11 +66,15 @@ def get_keys(bod_od, bod_osm, porov, dstan):
         # edittag[1] = bod_osm[9]
         # edittag[2] = jm
         # edittag[3] = refe
-    edittag = [[] for i in range(4)]
-    edittag[0].append("node")
-    edittag[1].append(bod_osm[9])
-    edittag[2].append(jm)
-    edittag[3].append(refe)
+    # edittag = [[] for i in range(4)]
+    edittag = ['']*4
+    edittag[0] = "node"
+    # edittag[1].append(bod_osm[9])
+    edittag[1] = bod_osm[9]
+    # edittag[2].append(jm)
+    edittag[2] = jm
+    # edittag[3].append(refe)
+    edittag[3] = refe
 
     return edittag
 
@@ -139,7 +143,8 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan):
             else:
                 # zapíše zastávky z oficiálího seznamu, které nejsou v OSM
                 if dg == 0:
-                    chybejicisinglzast = [[] for i in range(4)]
+                    # chybejicisinglzast = [[] for i in range(4)]
+                    chybejicisinglzast = ['']*4
                     chybejicisinglzast[0] = []
                     chybejicisinglzast[0].append(lat)
                     chybejicisinglzast[1] = []
@@ -183,10 +188,10 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan):
     return ddn
 
 
-def tisk_csv(file, name):
+def tisk_csv(file, name, hlavicka):
     with open(name + ".csv", 'w', newline='') as f:
         writer = csv.writer(f, delimiter=";")
-        writer.writerow(['lat', 'lon', 'ref'])
+        writer.writerow(hlavicka)
         writer.writerows(file)
 
     return
@@ -429,10 +434,12 @@ print("Total items after deduplication bezdupl_list:", len(bezdupl_list))
 print("Total items in original josm :", len(josm))
 print("Total items after deduplication bezdupl_josm:", len(bezdupl_josm))
 print("Ahoj")
-tisk_csv(bezdupl_list, "bezdupl_list")
-tisk_csv(bezdupl_josm, "bezdupl_josm")
-tisk_csv(bezdupl_problemovazast, "problemovazast")
-tisk_csv(bezdupl_problemovybodosm, "problemovybodosm")
+tisk_csv(bezdupl_list, "bezdupl_list", ["lat", "lon", "ref:CIS_JR", "official_name"])
+tisk_csv(bezdupl_josm, "bezdupl_josm", ["elemnt,id", "official_name", "ref:CIS_JR"])
+tisk_csv(bezdupl_problemovazast, "problemovazast", ["lat", "lon", "ref", "okres", "name", "stanoviste", "typ"])
+# bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id)
+tisk_csv(bezdupl_problemovybodosm, "problemovybodosm", ["lat", "lon", "ref", "official_name", "name", "ref:CIS_JR",
+                                                        "stanoviste", "ref", "bus", "public_transport", "count", "id"])
 print("konec")
     # for x in csv_reader:
 #     if "lat" not in x:
