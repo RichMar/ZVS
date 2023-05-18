@@ -44,6 +44,17 @@ def get_keys(bod_od, bod_osm, porov, dstan):
                 jm = bod_od[4]
         elif i == 2 and x == "":
             jm = bod_od[4]
+        # name + stanoviste
+        if i == 3 and not x == "":
+            if (not x == bod_od[4] and porov < 0.11) or (x == bod_od[5] and not porov == 1):
+                problemovybodosm.append(bod_osm)
+            else:
+                jm = bod_od[4]
+        elif i == 3 and x == "" and bod_od[5] == "":
+            jm = bod_od[4]
+        elif i == 3 and x == "" and not bod_od[5] == "":
+            # zapise do name stannoviste
+            jm = bod_od[5]
         # ref
         if i == 4 and not x == "":
             if not x == bod_od[2]:
@@ -193,7 +204,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan):
 
 
 def tisk_csv(file, name, hlavicka):
-    with open(name + ".csv", 'w', newline='') as f:
+    with open(name + ".csv", 'w', newline='', encoding="utf8") as f:
         writer = csv.writer(f, delimiter=';')
         writer.writerow(hlavicka)
         writer.writerows(file)
