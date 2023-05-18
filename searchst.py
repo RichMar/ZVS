@@ -55,6 +55,7 @@ def get_keys(bod_od, bod_osm, porov, dstan):
         elif i == 3 and x == "" and not bod_od[5] == "":
             # zapise do name stannoviste
             jm = bod_od[5]
+
         # ref
         if i == 4 and not x == "":
             if not x == bod_od[2]:
@@ -112,7 +113,7 @@ def deduplicate(a, clen):
     return new_list
 
 
-def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan):
+def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan,doficialname):
     ddd = 0
     ddn = dn
     for xx in ddata:
@@ -124,18 +125,18 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan):
                 # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
                 # name 3 a official name 2
                 if not xx[3] == "" or not xx[2] == "":
-                    s = difflib.SequenceMatcher(None, xx[3], oficialname)
+                    s = difflib.SequenceMatcher(None, xx[3], doficialname)
                     similarity = s.ratio()
-                    if 0.11 <= similarity < 0.6 and not xx[2] == "":
-                        s = difflib.SequenceMatcher(None, xx[2], oficialname)
+                    if 0.11 <= similarity and not xx[2] == "":
+                        s = difflib.SequenceMatcher(None, xx[2], doficialname)
                         similarity = s.ratio()
 
                         print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
-                          xx[3] + "-----Official name: " + oficialname + " =" + str(similarity))
+                          xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
 
                         radek = get_keys(dx, xx, float(similarity), dstan)
                         josm.append(radek)
-                    elif similarity < 0.11:
+                    elif similarity < 0.11 and not xx[2] == "":
                          problemovazast.append(dx)
                     else:
                         radek = get_keys(dx, xx, float(similarity), dstan)
@@ -168,7 +169,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan):
                     chybejicisinglzast[2] = ref
                     chybejicisinglzast[3] = []
                     # chybejicisinglzast[3].append(oficialname)
-                    chybejicisinglzast[3] = oficialname
+                    chybejicisinglzast[3] = doficialname
                     chybejicisinglzast_list.append(chybejicisinglzast[:])
                     dg = 1
 
@@ -309,7 +310,7 @@ if os.path.exists(csvfile):
                 oficialname = zastavkykraj[index_zast[0][0]][4]
                 ref = zastavkykraj[index_zast[0][0]][2]
                 stan = ""
-                n = tridit(lat, lon, 0.025, x, n, g, 1, data, stan)
+                n = tridit(lat, lon, 0.025, x, n, g, 1, data, stan,oficialname)
 
                 # dd = 0
                 # for xx in data:
@@ -373,7 +374,7 @@ if os.path.exists(csvfile):
                     oficialname = zastavkykraj[ii[0]][4]
                     ref = zastavkykraj[ii[0]][2]
                     stan = ""
-                    n = tridit(lat, lon, 0.010, x, n, g, 2, data, stan)
+                    n = tridit(lat, lon, 0.010, x, n, g, 2, data, stan,oficialname)
                     # dd = 0
                     # for xx in data:
                     #
@@ -430,7 +431,7 @@ if os.path.exists(csvfile):
                         oficialname = zastavkykraj[ii[0]][4]
                         ref = zastavkykraj[ii[0]][2]
                         stan = zastavkykraj[ii[0]][5]
-                        n = tridit(lat, lon, 0.010, x, n, g, len(index_zast), data, stan)
+                        n = tridit(lat, lon, 0.010, x, n, g, len(index_zast), data, stan,oficialname)
 # res_chybejicisinglzast_list = list(set(chybejicisinglzast_list))
 # kuku = removedup(chybejicisinglzast_list)
 # counts = Counter(row[0] for row in chybejicisinglzast_list)
