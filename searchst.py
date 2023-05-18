@@ -67,7 +67,7 @@ def get_keys(bod_od, bod_osm, porov, dstan):
         # edittag[2] = jm
         # edittag[3] = refe
     # edittag = [[] for i in range(4)]
-    edittag = ['']*4
+    edittag = ['']*6
     edittag[0] = "node"
     # edittag[1].append(bod_osm[9])
     edittag[1] = bod_osm[9]
@@ -75,7 +75,8 @@ def get_keys(bod_od, bod_osm, porov, dstan):
     edittag[2] = jm
     # edittag[3].append(refe)
     edittag[3] = refe
-
+    edittag[4] = bod_osm[0]
+    edittag[5] = bod_osm[1]
     return edittag
 
 
@@ -146,14 +147,17 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan):
                     # chybejicisinglzast = [[] for i in range(4)]
                     chybejicisinglzast = ['']*4
                     chybejicisinglzast[0] = []
-                    chybejicisinglzast[0].append(lat)
+                    # chybejicisinglzast[0].append(lat)
+                    chybejicisinglzast[0] = lat
                     chybejicisinglzast[1] = []
-                    chybejicisinglzast[1].append(lon)
+                    # chybejicisinglzast[1].append(lon)
+                    chybejicisinglzast[1] = lon
                     chybejicisinglzast[2] = []
-                    chybejicisinglzast[2].append(ref)
+                    # chybejicisinglzast[2].append(ref)
+                    chybejicisinglzast[2] = ref
                     chybejicisinglzast[3] = []
-                    chybejicisinglzast[3].append(oficialname)
-
+                    # chybejicisinglzast[3].append(oficialname)
+                    chybejicisinglzast[3] = oficialname
                     chybejicisinglzast_list.append(chybejicisinglzast[:])
                     dg = 1
 
@@ -190,7 +194,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan):
 
 def tisk_csv(file, name, hlavicka):
     with open(name + ".csv", 'w', newline='') as f:
-        writer = csv.writer(f, delimiter=";")
+        writer = csv.writer(f, delimiter=';')
         writer.writerow(hlavicka)
         writer.writerows(file)
 
@@ -435,7 +439,7 @@ print("Total items in original josm :", len(josm))
 print("Total items after deduplication bezdupl_josm:", len(bezdupl_josm))
 print("Ahoj")
 tisk_csv(bezdupl_list, "bezdupl_list", ["lat", "lon", "ref:CIS_JR", "official_name"])
-tisk_csv(bezdupl_josm, "bezdupl_josm", ["elemnt,id", "official_name", "ref:CIS_JR"])
+tisk_csv(bezdupl_josm, "bezdupl_josm", ["elemnt", "id", "official_name", "ref:CIS_JR", "lat", "lon"])
 tisk_csv(bezdupl_problemovazast, "problemovazast", ["lat", "lon", "ref", "okres", "name", "stanoviste", "typ"])
 # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id)
 tisk_csv(bezdupl_problemovybodosm, "problemovybodosm", ["lat", "lon", "ref", "official_name", "name", "ref:CIS_JR",
