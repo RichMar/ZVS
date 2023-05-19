@@ -35,6 +35,8 @@ def get_keys(bod_od, bod_osm, porov, dstan):
     jm = ""
     refe = ""
     for x in bod_osm[2:]:
+        # jm = ""
+        # refe = ""
         # official name
         if i == 2 and not x == "":
             if not x == bod_od[4] and porov < 0.11:
@@ -113,9 +115,11 @@ def deduplicate(a, clen):
     return new_list
 
 
-def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan,doficialname):
+def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, dref):
     ddd = 0
     ddn = dn
+    pruchod = 1
+    # prochází data z OSM
     for xx in ddata:
         if "lat" not in str(xx) and not xx[0] == "":
             vzd = get_distance(float(dlat), float(dlon), float(xx[0]), float(xx[1]))
@@ -155,24 +159,24 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan,doficialname):
 
             else:
                 # zapíše zastávky z oficiálího seznamu, které nejsou v OSM
-                if dg == 0:
+                if pruchod == 1:
                     # chybejicisinglzast = [[] for i in range(4)]
                     chybejicisinglzast = ['']*4
                     chybejicisinglzast[0] = []
                     # chybejicisinglzast[0].append(lat)
-                    chybejicisinglzast[0] = lat
+                    chybejicisinglzast[0] = dlat
                     chybejicisinglzast[1] = []
                     # chybejicisinglzast[1].append(lon)
-                    chybejicisinglzast[1] = lon
+                    chybejicisinglzast[1] = dlon
                     chybejicisinglzast[2] = []
                     # chybejicisinglzast[2].append(ref)
-                    chybejicisinglzast[2] = ref
+                    chybejicisinglzast[2] = dref
                     chybejicisinglzast[3] = []
                     # chybejicisinglzast[3].append(oficialname)
                     chybejicisinglzast[3] = doficialname
                     chybejicisinglzast_list.append(chybejicisinglzast[:])
-                    dg = 1
-
+                    # dg = 1
+                    pruchod = 0
                     #
                     # if ddn > 100:
                     #     bezdupl_list = deduplicate(chybejicisinglzast_list, 0)
@@ -310,7 +314,7 @@ if os.path.exists(csvfile):
                 oficialname = zastavkykraj[index_zast[0][0]][4]
                 ref = zastavkykraj[index_zast[0][0]][2]
                 stan = ""
-                n = tridit(lat, lon, 0.025, x, n, g, 1, data, stan,oficialname)
+                n = tridit(lat, lon, 0.025, x, n, g, 1, data, stan, oficialname, ref)
 
                 # dd = 0
                 # for xx in data:
@@ -374,7 +378,7 @@ if os.path.exists(csvfile):
                     oficialname = zastavkykraj[ii[0]][4]
                     ref = zastavkykraj[ii[0]][2]
                     stan = ""
-                    n = tridit(lat, lon, 0.010, x, n, g, 2, data, stan,oficialname)
+                    n = tridit(lat, lon, 0.015, x, n, g, 2, data, stan, oficialname, ref)
                     # dd = 0
                     # for xx in data:
                     #
@@ -431,7 +435,7 @@ if os.path.exists(csvfile):
                         oficialname = zastavkykraj[ii[0]][4]
                         ref = zastavkykraj[ii[0]][2]
                         stan = zastavkykraj[ii[0]][5]
-                        n = tridit(lat, lon, 0.010, x, n, g, len(index_zast), data, stan,oficialname)
+                        n = tridit(lat, lon, 0.010, x, n, g, len(index_zast), data, stan, oficialname, ref)
 # res_chybejicisinglzast_list = list(set(chybejicisinglzast_list))
 # kuku = removedup(chybejicisinglzast_list)
 # counts = Counter(row[0] for row in chybejicisinglzast_list)
