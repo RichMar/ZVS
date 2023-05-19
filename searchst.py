@@ -35,6 +35,12 @@ def get_keys(bod_od, bod_osm, porov, dstan):
     jm = ""
     refe = ""
     for x in bod_osm[2:]:
+        # if "Hosín" in x:
+        #     print("Hosín")
+        # if x == 3394620128:
+        #     print("Hosín")
+        # if str(x)=="3394620128":
+        #     print("Hosín")
         # jm = ""
         # refe = ""
         # official name
@@ -48,6 +54,9 @@ def get_keys(bod_od, bod_osm, porov, dstan):
             jm = bod_od[4]
         # name + stanoviste
         if i == 3 and not x == "":
+            if x == "Hosín":
+                print("Hosín")
+
             if (not x == bod_od[4] and porov < 0.11) or (x == bod_od[5] and not porov == 1):
                 problemovybodosm.append(bod_osm)
             else:
@@ -120,10 +129,28 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
     ddn = dn
     pruchod = 1
     # prochází data z OSM
+    # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id)
+    h = 0
     for xx in ddata:
-        if "lat" not in str(xx) and not xx[0] == "":
+        h += 1
+        # if not xx == ['']:
+            # if xx[3] == "Hosín":
+                # print("Hosín")
+            # if xx[9] == 3394620128:
+            #     print("Hosín")
+            # if str(xx[9]) == "3394620128":
+            #     print("Hosín")
+        if "@lat" not in str(xx) and not xx[0] == "":
             vzd = get_distance(float(dlat), float(dlon), float(xx[0]), float(xx[1]))
+            # if xx[3] == "Hosín":
+            #     print("Hosín")
+            # if str(xx[9]) == "3394620128":
+            #     print("Hosín")
             if vzd < limvzd:
+                if xx[3] == "Hosín":
+                    print("Hosín")
+                if str(xx[9]) == "3394620128":
+                    print("Hosín")
                 ddd += 1
                 ddn += 1
                 # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
