@@ -131,6 +131,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
     # prochází data z OSM
     # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id)
     h = 0
+    vzdalenost = []
     for xx in ddata:
         h += 1
         # if not xx == ['']:
@@ -142,6 +143,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
             #     print("Hosín")
         if "@lat" not in str(xx) and not xx[0] == "":
             vzd = get_distance(float(dlat), float(dlon), float(xx[0]), float(xx[1]))
+            vzdalenost.append(vzd)
             # if xx[3] == "Hosín":
             #     print("Hosín")
             # if str(xx[9]) == "3394620128":
@@ -184,26 +186,28 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
                     problemovazast.append(dx)
 
 
-            else:
+            # else:
                 # zapíše zastávky z oficiálího seznamu, které nejsou v OSM
-                if pruchod == 1:
-                    # chybejicisinglzast = [[] for i in range(4)]
-                    chybejicisinglzast = ['']*4
-                    chybejicisinglzast[0] = []
-                    # chybejicisinglzast[0].append(lat)
-                    chybejicisinglzast[0] = dlat
-                    chybejicisinglzast[1] = []
-                    # chybejicisinglzast[1].append(lon)
-                    chybejicisinglzast[1] = dlon
-                    chybejicisinglzast[2] = []
-                    # chybejicisinglzast[2].append(ref)
-                    chybejicisinglzast[2] = dref
-                    chybejicisinglzast[3] = []
-                    # chybejicisinglzast[3].append(oficialname)
-                    chybejicisinglzast[3] = doficialname
-                    chybejicisinglzast_list.append(chybejicisinglzast[:])
+                # if pruchod == 1:
+    minimum = min(vzdalenost)
+    if minimum > 0.025:
+        # chybejicisinglzast = [[] for i in range(4)]
+        chybejicisinglzast = ['']*4
+        chybejicisinglzast[0] = []
+        # chybejicisinglzast[0].append(lat)
+        chybejicisinglzast[0] = dlat
+        chybejicisinglzast[1] = []
+        # chybejicisinglzast[1].append(lon)
+        chybejicisinglzast[1] = dlon
+        chybejicisinglzast[2] = []
+        # chybejicisinglzast[2].append(ref)
+        chybejicisinglzast[2] = dref
+        chybejicisinglzast[3] = []
+        # chybejicisinglzast[3].append(oficialname)
+        chybejicisinglzast[3] = doficialname
+        chybejicisinglzast_list.append(chybejicisinglzast[:])
                     # dg = 1
-                    pruchod = 0
+                    # pruchod = 0
                     #
                     # if ddn > 100:
                     #     bezdupl_list = deduplicate(chybejicisinglzast_list, 0)
