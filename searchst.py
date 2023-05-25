@@ -55,7 +55,7 @@ def get_keys(bod_od, bod_osm, porov, dstan):
             jm = bod_od[4]
         # name
         if i == 3 and not x == "":
-            if x == "Hosín":
+            if x == "Husinec":
                 print("Hosín")
 
             if (not x == bod_od[4] and porov < 0.11) or (not x == bod_od[5]):
@@ -66,9 +66,9 @@ def get_keys(bod_od, bod_osm, porov, dstan):
                 jm = ""
         elif i == 3 and x == "" and bod_od[5] == "":
             jm = bod_od[4]
-        elif i == 3 and x == "" and not bod_od[5] == "":
-            # zapise do name stannoviste
-            locref = bod_od[5]
+        # elif i == 3 and x == "" and not bod_od[5] == "":
+        #     # zapise do name stannoviste
+        #     locref = bod_od[5]
 
         # ref
         if i == 4 and not x == "":
@@ -84,9 +84,11 @@ def get_keys(bod_od, bod_osm, porov, dstan):
             if not x == bod_od[5]:
                 problemovybodosm.append(bod_osm)
             else:
-                locref = bod_od[5]
+                # locref = bod_od[5]
+                locref = dstan
         elif i == 10 and x == "":
-            locref = ""
+            # locref = bod_od[5]
+            locref = dstan
         i += 1
 
         # edittag = "node;" + bod_osm[9] + ";" + jm + ";" + refe
@@ -155,15 +157,16 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
             # if str(xx[9]) == "3394620128":
             #     print("Hosín")
             if vzd < limvzd:
-                if xx[3] == "Hosín":
-                    print("Hosín1")
+                if xx[3] == "Husinec":
+                    print("Husinec1")
                 if str(xx[9]) == "3394620128":
                     print("Hosín2")
                 ddd += 1
                 ddn += 1
                 # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
                 # name 3 a official name 2
-                if not xx[3] == "" or not xx[2] == "":
+                # if not xx[3] == "" or not xx[2] == "":
+                if not xx[2] == "":
                     s = difflib.SequenceMatcher(None, xx[3], doficialname)
                     similarity = s.ratio()
                     if 0.11 <= similarity and not xx[2] == "":
@@ -183,7 +186,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
 
                     #     print("kuku")
                 else:
-                    radek = get_keys(dx, xx, 0, dstan)
+                    radek = get_keys(dx, xx, 2, dstan)
                     josm.append(radek)
 
                 if ddd > pocetz:
@@ -350,7 +353,7 @@ if os.path.exists(csvfile):
                 lon = zastavkykraj[index_zast[0][0]][1]
                 oficialname = zastavkykraj[index_zast[0][0]][4]
                 ref = zastavkykraj[index_zast[0][0]][2]
-                stan = ""
+                stan = zastavkykraj[ii[0]][5]
                 n = tridit(lat, lon, 0.025, x, n, g, 1, data, stan, oficialname, ref)
 
                 # dd = 0
@@ -414,7 +417,7 @@ if os.path.exists(csvfile):
                     lon = zastavkykraj[ii[0]][1]
                     oficialname = zastavkykraj[ii[0]][4]
                     ref = zastavkykraj[ii[0]][2]
-                    stan = ""
+                    stan = zastavkykraj[ii[0]][5]
                     n = tridit(lat, lon, 0.015, x, n, g, 2, data, stan, oficialname, ref)
                     # dd = 0
                     # for xx in data:
@@ -472,7 +475,7 @@ if os.path.exists(csvfile):
                         oficialname = zastavkykraj[ii[0]][4]
                         ref = zastavkykraj[ii[0]][2]
                         stan = zastavkykraj[ii[0]][5]
-                        n = tridit(lat, lon, 0.010, x, n, g, len(index_zast), data, stan, oficialname, ref)
+                        n = tridit(lat, lon, 0.005, x, n, g, len(index_zast), data, stan, oficialname, ref)
 # res_chybejicisinglzast_list = list(set(chybejicisinglzast_list))
 # kuku = removedup(chybejicisinglzast_list)
 # counts = Counter(row[0] for row in chybejicisinglzast_list)
