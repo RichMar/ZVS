@@ -166,26 +166,36 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
                 # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
                 # name 3 a official name 2
                 # if not xx[3] == "" or not xx[2] == "":
-                if not xx[2] == "":
-                    s = difflib.SequenceMatcher(None, xx[3], doficialname)
+                if not xx[2] == "" or not xx[3] == "":
+                    s = difflib.SequenceMatcher(None, xx[2], doficialname)
                     similarity = s.ratio()
-                    if 0.11 <= similarity and not xx[2] == "":
-                        s = difflib.SequenceMatcher(None, xx[2], doficialname)
+                    if similarity < 0.11:
+                        s = difflib.SequenceMatcher(None, xx[3], doficialname)
                         similarity = s.ratio()
+                        if similarity < 0.11:
+                            s = difflib.SequenceMatcher(None, xx[3], dstan)
+                            similarity = s.ratio()
+                            if similarity < 0.11:
+                                problemovazast.append(dx)
+                        # print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
+                        #   xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
 
-                        print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
-                          xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
-
-                        radek = get_keys(dx, xx, float(similarity), dstan)
-                        josm.append(radek)
-                    elif similarity < 0.11 and not xx[2] == "":
-                         problemovazast.append(dx)
+                    #     radek = get_keys(dx, xx, float(similarity), dstan)
+                    #     josm.append(radek)
+                    # elif similarity < 0.11:
+                    #      problemovazast.append(dx)
                     else:
+                        print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(
+                            xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
+                              xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
                         radek = get_keys(dx, xx, float(similarity), dstan)
                         josm.append(radek)
 
-                    #     print("kuku")
+                    #   print("kuku")
                 else:
+                    # print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(
+                    #     xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
+                    #       xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
                     radek = get_keys(dx, xx, 2, dstan)
                     josm.append(radek)
 
