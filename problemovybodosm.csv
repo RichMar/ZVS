@@ -1,0 +1,477 @@
+lat;lon;ref;official_name;name;ref:CIS_JR;stanoviste;ref;bus;public_transport;count;id
+49.1390569;15.0190877;"""Jindřichův Hradec, sídl. Vajgar-trojstředisko""";sídliště Vajgar-trojstředisko;13432;;yes;platform;;5194568304;
+49.1392113;15.0201136;"""Jindřichův Hradec, sídl. Vajgar-trojstředisko""";sídliště Vajgar-trojstředisko;13432;;yes;platform;;5194613966;
+49.1443361;15.0251008;"""Jindřichův Hradec, U cihelny""";U Cihelny;64284;;yes;platform;;5197761683;
+49.1447478;15.0276842;"""Jindřichův Hradec, U cihelny""";U Cihelny;64284;;yes;platform;;9174048194;
+49.1383683;15.0081563;"""Jindřichův Hradec, Zborovská""";Zborovská;13440;;yes;platform;;3248441992;
+49.1382172;15.0082184;"""Jindřichův Hradec, Zborovská""";Zborovská;13440;;yes;platform;;9174048345;
+49.1407885;15.0393211;"""Jindřichův Hradec, Otín, vilky""";"""Otín, vilky""";64289;;yes;platform;;6224789018;
+49.1404706;15.0401585;"""Jindřichův Hradec, Otín, vilky""";"""Otín, vilky""";64289;;yes;platform;;8809000587;
+49.3405490;14.7214806;"""Planá n. Luž., Nad Hejtmanem Lipová alej""";"""Planá nad Lužnicí, Nad Hejtmanem Lipová alej""";62683;;yes;platform;;9729270167;
+49.3428884;14.7174324;"""Planá n. Luž., Okružní bytovky""";"""Planá nad Lužnicí, Okružní bytovky""";62682;;yes;platform;;9729270162;
+49.3424923;14.7165720;"""Planá n. Luž., Okružní bytovky""";"""Planá nad Lužnicí, Okružní bytovky""";62682;;yes;platform;;766751365;
+49.3480729;14.7105722;"""Planá n. Luž., Strkovská""";"""Planá nad Lužnicí, Strkovská""";55008;;yes;platform;;9969151976;
+49.3479161;14.7106638;"""Planá n. Luž., Strkovská""";"""Planá nad Lužnicí, Strkovská""";55008;;yes;platform;;3742898330;
+49.3576199;14.6998084;"""Planá n. Luž., U řadovek""";"""Planá nad Lužnicí, u řadovek""";55152;;yes;platform;;3646789800;
+49.3589593;14.7002728;"""Planá n. Luž., U řadovek""";Planá nad Lužnicí U řadovek;55152;;yes;platform;;3646789801;
+49.3540250;14.6989806;"""Planá n. Luž., Za mostem""";"""Planá nad Lužnicí, za mostem""";64191;;yes;platform;;3742898329;
+49.4535131;14.5915744;"""Balkova Lhota, Černý les""";"""Balkova Lhota,Černý Les""";;;yes;platform;;6980167648;
+49.4533731;14.5916341;"""Balkova Lhota, Černý les""";"""Balkova Lhota,Černý Les""";;;yes;platform;;6980167647;
+48.6506610;14.4526338;"""Dolní Dvořiště, st.hr.""";"""Dolní Dvořiště, státní hranice""";;;yes;platform;;7377468655;
+49.1535767;15.0131779;"""Jindřichův Hradec, Jarošovská""";Jarošovská;64288;;yes;platform;;9174048229;
+49.1529643;15.0126836;"""Jindřichův Hradec, Jarošovská""";Jarošovská;64288;;yes;platform;;5171752313;
+49.1315442;15.0142555;"""Jindřichův Hradec, Jiráskovo předměstí""";Jiráskovo předměstí;64239;;yes;platform;;9174048193;
+49.1311375;15.0136980;"""Jindřichův Hradec, Jiráskovo předměstí""";Jiráskovo předměstí;64239;;yes;platform;;9174048191;
+49.1475295;15.0364013;"""Jindřichův Hradec, Jitka Bobelovka""";Jitka Bobelovka;13411;;yes;platform;;3248441983;
+49.1425208;14.9939092;"""Jindřichův Hradec, Na Palici""";Na Palici;62946;;yes;platform;;9174048184;
+49.1427485;14.9937413;"""Jindřichův Hradec, Na Palici""";Na Palici;62946;;yes;platform;;9174048182;
+49.1461037;15.0032185;"""Jindřichův Hradec, nám. Masarykovo""";nám. Masarykovo;13421;;yes;platform;;1448497449;
+49.1460577;15.0040681;"""Jindřichův Hradec, nám. Masarykovo""";nám. Masarykovo;13421;;yes;platform;;1448497447;
+49.1396800;15.0067432;"""Jindřichův Hradec, nemocnice hlavní brána""";Nemocnice hlavní brána;63476;;yes;platform;;6029940485;
+49.1395212;15.0068050;"""Jindřichův Hradec, nemocnice hlavní brána""";Nemocnice hlavní brána;63476;;yes;platform;;9174048344;
+49.1384628;15.0043825;"""Jindřichův Hradec, nemocnice LDN""";Nemocnice LDN;64290;;yes;platform;;9174048197;
+49.1388872;15.0027080;"""Jindřichův Hradec, nemocnice LDN""";Nemocnice LDN;64290;;yes;platform;;5184450362;
+49.1334180;15.0106310;"""Jindřichův Hradec, obchodní zóna""";Obchodní zóna;64247;;yes;platform;;9174048346;
+49.1330830;15.0096136;"""Jindřichův Hradec, obchodní zóna""";Obchodní zóna;64247;;yes;platform;;9174048347;
+49.1481956;15.0017341;"""Jindřichův Hradec, Oděva""";Oděva;13424;;yes;platform;;9174048222;
+49.1403239;15.0021023;"""Jindřichův Hradec, poliklinika""";Poliklinika;64085;;yes;platform;;9174048196;
+49.1396544;15.0023235;"""Jindřichův Hradec, poliklinika""";Poliklinika;64085;;yes;platform;;9174048195;
+49.1514845;14.9963182;"""Jindřichův Hradec, Pražská""";Pražská;13409;;yes;platform;;9174048200;
+49.1511613;14.9965680;"""Jindřichův Hradec, Pražská""";Pražská;13409;;yes;platform;;9174048201;
+49.1503347;15.0078996;"""Jindřichův Hradec, sídl. U nádraží""";sídliště U nádraží;13431;;yes;platform;;5168668457;
+49.1506819;15.0089336;"""Jindřichův Hradec, sídl. U nádraží""";sídliště U nádraží;13431;;yes;platform;;5168666913;
+49.4160822;14.6435101;"""Tábor, Klokoty, Klášter""";Klokoty klášter;;;yes;platform;;4496749989;
+49.4159552;14.6433139;"""Tábor, Klokoty, Klášter""";Klokoty klášter;64938;;yes;platform;;10741509937;
+49.4306483;13.8728463;"""Blatná, žel. st.""";"""Blatná, žel. st.""";;výstup;yes;platform;;10689847272;
+49.4305633;13.8726972;"""Blatná, žel. st.""";"""Blatná, žel. st.""";;4;yes;platform;;6657981018;
+49.4309845;13.8736134;"""Blatná, žel. st.""";"""Blatná, žel. st.""";;2;yes;platform;;6657981019;2
+49.4305687;13.8730373;"""Blatná, žel. st.""";"""Blatná, žel. st.""";;3;yes;platform;;10689847275;3
+49.1801117;13.8931394;"""Přechovice, rozc. 0.1""";"""Přechovice, rozc. 0.1""";48107;;yes;platform;;9595873670;
+49.3785210;13.9365358;"""Sedlice, nám.""";"""Sedlice, náměstí""";;;yes;platform;;6329597155;
+49.3783266;13.9366435;"""Sedlice, nám.""";"""Sedlice, náměstí""";;;yes;platform;;6329597156;
+49.2554515;13.9166766;"""Strakonice, aut. nádr.""";"""Strakonice, autobusové nádraží""";;10;yes;platform;;7880597517;10
+49.2555063;13.9166584;"""Strakonice, aut. nádr.""";"""Strakonice, autobusové nádraží""";;9;yes;platform;;7880597518;9
+49.2555600;13.9166353;"""Strakonice, aut. nádr.""";"""Strakonice, autobusové nádraží""";;8;yes;platform;;7880597519;8
+49.2556160;13.9166125;"""Strakonice, aut. nádr.""";"""Strakonice, autobusové nádraží""";;7;yes;platform;;7880597520;7
+49.2556700;13.9165880;"""Strakonice, aut. nádr.""";"""Strakonice, autobusové nádraží""";;6;yes;platform;;7880597521;6
+49.2557277;13.9165648;"""Strakonice, aut. nádr.""";"""Strakonice, autobusové nádraží""";;5;yes;platform;;7880597522;5
+49.2557816;13.9165411;"""Strakonice, aut. nádr.""";"""Strakonice, autobusové nádraží""";;4;yes;platform;;7880597523;4
+49.2558358;13.9165189;"""Strakonice, aut. nádr.""";"""Strakonice, autobusové nádraží""";;3;yes;platform;;7880597524;3
+49.2558915;13.9164951;"""Strakonice, aut. nádr.""";"""Strakonice, autobusové nádraží""";;2;yes;platform;;7880597525;2
+49.2559461;13.9164724;"""Strakonice, aut. nádr.""";"""Strakonice, autobusové nádraží""";;1;yes;platform;;7880597526;1
+49.2563348;13.9163255;"""Strakonice, aut. nádr.""";"""Strakonice, aut.nádr. (výstup)""";33240;;yes;platform;;8446473550;výstupní
+49.1385980;15.0089672;"""Jindřichův Hradec, kasárna""";Kasárna;13413;;yes;platform;;3248441994;
+49.1381372;15.0092970;"""Jindřichův Hradec, kasárna""";Kasárna;13413;;yes;platform;;2704092984;
+49.1312451;15.0181933;"""Jindřichův Hradec, hřbitov""";Hřbitov;13407;;yes;platform;;3248441982;
+49.1311902;15.0179925;"""Jindřichův Hradec, hřbitov""";Hřbitov;13407;;yes;platform;;9174048192;
+49.1259294;15.0245612;"""Jindřichův Hradec, Fruko""";Fruko;13406;;yes;platform;;3248441980;
+49.1126368;14.9983434;"""Jindřichův Hradec, Horní Žďár, rozc.""";"""Horní Žďár, rozcestí""";47319;;yes;platform;;9014809375;
+49.1124764;14.9985504;"""Jindřichův Hradec, Horní Žďár, rozc.""";"""Horní Žďár, rozcestí""";47319;;yes;platform;;9014809376;
+49.1123679;14.9961150;"""Jindřichův Hradec, Horní Žďár, host.""";"""Horní Žďár, hostinec""";13449;;yes;platform;;1446631721;
+49.2096585;13.8880434;Strunkovice n. Vol.;Strunkovice nad Volyňkou;33585;;yes;platform;;9595850496;
+49.2068040;13.8874248;Strunkovice n. Vol.;Strunkovice nad Volyňkou;33585;;yes;platform;;9595886828;
+49.1988531;13.8857464;"""Strunkovice n. Vol., rozc. Němětice 0.5""";"""Strunkovice nad Volyňkou, rozc. Němětice 0.5""";22903;;yes;platform;;10736739684;
+49.1985985;13.8856418;"""Strunkovice n. Vol., rozc. Němětice 0.5""";"""Strunkovice nad Volyňkou, rozc. Němětice 0.5""";22903;;yes;platform;;10736739685;
+49.1193776;15.0011737;"""Jindřichův Hradec, Horní Žďár, pískovna""";"""Horní Žďár, pískovna""";13450;;yes;platform;;1446631731;
+49.1193761;15.0014099;"""Jindřichův Hradec, Horní Žďár, pískovna""";"""Horní Žďár, pískovna""";13450;;yes;platform;;9174048126;
+49.1637830;13.7792084;"""Dřešín, rozc. 0.2""";"""Dřešín, rozcestí 0.2""";7217;;yes;platform;;833185912;
+49.2081604;14.7946720;"""Záhoří, rozc. 1.0""";"""Záhoří, rozcestí 1.0""";;;yes;platform;;10687627256;2
+49.2082176;14.7938719;"""Záhoří, rozc. 1.0""";"""Záhoří, rozcestí 1.0""";;;yes;platform;;10687627255;1
+49.1981659;14.8206930;"""Pleše, host.""";"""Pleše, hostinec""";;;yes;platform;;10687627252;1
+49.1983833;14.8205786;"""Pleše, host.""";"""Pleše, hostinec""";;;yes;platform;;10687627254;2
+49.2069482;14.7176806;"""Veselí n. Luž., Madeta""";"""Veselí nad Lužnicí, Madeta""";39222;;yes;platform;;9729271012;
+49.2073081;14.7175211;"""Veselí n. Luž., Madeta""";"""Veselí nad Lužnicí, Madeta""";39222;;yes;platform;;9729271013;
+49.1935139;14.7159410;"""Veselí n. Luž., aut. st.""";"""Veselí nad Lužnicí, aut.st.""";;;yes;platform;;10690713515;1
+49.5035439;13.8745661;"""Bělčice, nám.""";"""Bělčice, náměstí""";;;yes;platform;;10689847291;
+49.1872355;14.7081288;"""Veselí n. Luž., U kina""";"""Veselí nad Lužnicí, U kina""";39227;;yes;platform;;9729270486;
+49.1873595;14.7081344;"""Veselí n. Luž., U kina""";"""Veselí nad Lužnicí, U kina""";39227;;yes;platform;;9729270487;
+49.1864641;14.7013655;"""Veselí n. Luž., kult. dům""";"""Veselí nad Lužnicí, kulturní dům""";39220;;yes;platform;;4781736929;
+49.1866734;14.7013559;"""Veselí n. Luž., kult. dům""";"""Veselí nad Lužnicí, kulturní dům""";39220;;yes;platform;;2404087538;
+49.1844454;14.8511459;"""Kardašova Řečice, nám.""";"""Kardašova Řečice, náměstí""";;;yes;platform;;2086552988;
+49.1845337;14.8509772;"""Kardašova Řečice, nám.""";"""Kardašova Řečice, náměstí""";;;yes;platform;;10687627253;1
+49.0080706;14.7649754;"""Třeboň, aut. nádr.""";"""Třeboň, autobusové nádraží""";36731;;yes;platform;;9856199340;4
+49.0079530;14.7651507;"""Třeboň, aut. nádr.""";"""Třeboň, autobusové nádraží""";36731;;yes;platform;;9856199343;5
+49.0078342;14.7653262;"""Třeboň, aut. nádr.""";"""Třeboň, autobusové nádraží""";36731;;yes;platform;;9856199339;6
+49.0080952;14.7648286;"""Třeboň, aut. nádr.""";"""Třeboň, autobusové nádraží""";36731;;yes;platform;;9856199342;3
+49.0079836;14.7650026;"""Třeboň, aut. nádr.""";"""Třeboň, autobusové nádraží""";36731;;yes;platform;;9856199341;2
+49.0078664;14.7651785;"""Třeboň, aut. nádr.""";"""Třeboň, autobusové nádraží""";36731;;yes;platform;;9856199344;1
+48.8962176;14.6755494;"""Borovany, Hluboká u Bor., u žel. přejezdu""";"""Borovany, Hluboká u Borovan, u železničního přejezdu""";;;;;;5115161072;
+48.8976559;14.6797166;"""Borovany, Hluboká u Bor.""";"""Borovany, Hluboká u Borovan""";;;;;;5115161081;
+48.8391954;14.6368645;"""Trhové Sviny, aut. nádr.""";"""Trhové Sviny, autobusové nádraží""";36260;;yes;platform;;10179141065;6
+48.8391506;14.6371140;"""Trhové Sviny, aut. nádr.""";"""Trhové Sviny, autobusové nádraží""";36260;;yes;platform;;10179141070;5
+48.8391083;14.6373488;"""Trhové Sviny, aut. nádr.""";"""Trhové Sviny, autobusové nádraží""";36260;;yes;platform;;10179141067;4
+48.8392339;14.6370404;"""Trhové Sviny, aut. nádr.""";"""Trhové Sviny, autobusové nádraží""";36260;;yes;platform;;10179141068;1
+48.8391966;14.6372477;"""Trhové Sviny, aut. nádr.""";"""Trhové Sviny, autobusové nádraží""";36260;;yes;platform;;10179141069;2
+48.8391517;14.6374972;"""Trhové Sviny, aut. nádr.""";"""Trhové Sviny, autobusové nádraží""";36260;;yes;platform;;10179141066;3
+49.0815086;14.7194185;"""Lomnice n. Luž., Václavské nám.""";"""Lomnice nad Lužnicí, Václavské náměstí""";;;yes;platform;;2350432020;1
+49.0780212;14.7035031;"""Lomnice n. Luž., rozc. Smržov 1,2""";"""Lomnice nad Lužnicí, rozcestí Smržov 1,2 km""";;;yes;platform;;5772871635;
+49.2525469;14.0151154;"""Čejetice, žel. st.""";"""Čejetice, železniční stanice""";4302;;yes;platform;;2817480147;
+49.2676778;14.0086039;"""Štěkeň, nám.""";"""Štěkeň, náměstí""";34916;;yes;platform;;10591152538;
+49.2675490;14.0091330;"""Štěkeň, nám.""";"""Štěkeň, náměstí""";34916;;yes;platform;;10591152537;
+49.2607376;13.9013797;"""Strakonice, Velké nám.""";"""Strakonice, Velké náměstí""";33281;;yes;platform;;8006998670;
+49.2608837;13.9014682;"""Strakonice, Velké nám.""";"""Strakonice, Velké náměstí""";33281;;yes;platform;;8006998671;
+48.9004525;14.6426440;"""Borovany, aut. nádr.""";"""Borovany, autobusové nádraží""";;;yes;platform;;2388629062;
+48.9006739;14.6425371;"""Borovany, aut. nádr.""";"""Borovany, autobusové nádraží""";;;yes;platform;;10229322529;
+48.9008961;14.6424311;"""Borovany, aut. nádr.""";"""Borovany, autobusové nádraží""";;;yes;platform;;10229322528;
+49.0549020;14.4526270;"""Hluboká n.Vlt.,,U Pulců""";"""Hluboká nad Vltavou, U Pulců""";8917;;yes;platform;;7889739623;
+49.0548092;14.4524973;"""Hluboká n.Vlt.,,U Pulců""";"""Hluboká nad Vltavou, U Pulců""";8917;;yes;platform;;7889739621;
+49.0532199;14.4575668;"""Hluboká n. Vlt., Barborka""";"""Hluboká nad Vltavou, Barborka""";49132;;yes;platform;;9270017381;
+49.0531960;14.4574167;"""Hluboká n. Vlt., Barborka""";"""Hluboká nad Vltavou, Barborka""";49132;;yes;platform;;9270017382;
+48.8577273;14.6155009;"""Trhové Sviny, Čeřejov, rozc. 1.0""";"""Trhové Sviny, Čeřejov, rozcestí 1.0""";36271;;yes;platform;;2409698017;
+48.8577921;14.6155009;"""Trhové Sviny, Čeřejov, rozc. 1.0""";"""Trhové Sviny, Čeřejov, rozcestí 1.0""";36271;;yes;platform;;2409698019;
+49.2384014;15.0724452;"""Nová Včelnice, nám.""";"""Nová Včelnice, náměstí""";23626;;yes;platform;;9175107501;
+49.2382363;15.0726270;"""Nová Včelnice, nám.""";"""Nová Včelnice, náměstí""";23626;;yes;platform;;9175107502;
+49.2365682;15.0678095;"""Nová Včelnice, žel. st.""";"""Nová Včelnice, železniční stanice""";23629;;yes;platform;;2530579729;
+49.2364787;15.0678531;"""Nová Včelnice, žel. st.""";"""Nová Včelnice, železniční stanice""";23629;;yes;platform;;9175107498;
+49.2400612;15.0681355;"""Nová Včelnice, zdrav. stř.""";"""Nová Včelnice, zdravotní středisko""";49113;;yes;platform;;9175107496;
+49.2401514;15.0681419;"""Nová Včelnice, zdrav. stř.""";"""Nová Včelnice, zdravotní středisko""";49113;;yes;platform;;9175107497;
+49.3791647;14.4955289;"""Stádlec, nám.""";"""Stádlec, náměstí""";32659;;yes;platform;;2705895288;
+49.1589545;15.0227583;"""Jindřichův Hradec, Ke Kanclovu""";Ke Kanclovu;64286;;yes;platform;;9174048226;
+49.1588868;15.0228534;"""Jindřichův Hradec, Ke Kanclovu""";Ke Kanclovu;64286;;yes;platform;;9174048227;
+49.1563562;15.0173752;"""Jindřichův Hradec, Průmyslová""";Průmyslová;64287;;yes;platform;;9174048228;
+49.1554406;15.0165353;"""Jindřichův Hradec, Průmyslová""";Průmyslová;64287;;yes;platform;;3248441999;
+49.1052784;14.7225276;"""Lomnice n. Luž., hřbitov""";"""Lomnice nad Lužnicí, hřbitov""";;;yes;;;5770680185;
+49.1315926;14.9912098;"""Jindřichův Hradec, Rudolfov""";Rudolfov;13428;;yes;platform;;9174048189;
+49.1314991;14.9912813;"""Jindřichův Hradec, Rudolfov""";Rudolfov;13428;;yes;platform;;9174048190;
+49.1353739;14.9950567;"""Jindřichův Hradec, Šindelna""";Šindelna;49481;;yes;platform;;9174048187;
+49.1354049;14.9949935;"""Jindřichův Hradec, Šindelna""";Šindelna;49481;;yes;platform;;9174048188;
+49.1404708;14.9964007;"""Jindřichův Hradec, Nežárka""";Nežárka;13423;;yes;platform;;9174048181;
+49.1405168;14.9962650;"""Jindřichův Hradec, Nežárka""";Nežárka;13423;;yes;platform;;9174048183;
+49.1543370;14.9971022;"""Jindřichův Hradec, Zbuzany""";Zbuzany;13441;;yes;platform;;3248441993;
+49.1542558;14.9972218;"""Jindřichův Hradec, Zbuzany""";Zbuzany;13441;;yes;platform;;9174048205;
+49.1805171;14.3894859;"""Temelín, Březí u Týna, JE""";"""Temelín, Březí u Týna, JE""";;;yes;platform;;3696650808;
+49.1797117;14.3885360;"""Temelín, Březí u Týna, JE""";"""Temelín, Březí u Týna, JE""";;;yes;platform;;3696649057;
+49.1607862;14.3740148;"""Temelín, Kočín, rozc.1.0""";"""Temelín, Kočín, rozcestí 1,0 km""";;;;;;3696547184;
+49.1595975;14.3730541;"""Temelín, Kočín, rozc.1.0""";"""Temelín, Kočín, rozcestí 1,0 km""";;;;;;3696547183;
+49.1394365;14.3856376;"""Olešník, Nová Ves, rozc. 0.5""";"""Olešník, Nová Ves, rozcestí 0,5 km""";;;;;;3696547182;
+49.1489608;15.0029583;"""Jindřichův Hradec, Pravdova""";Pravdova;13426;;yes;platform;;9174048225;1
+49.1490865;15.0032014;"""Jindřichův Hradec, Pravdova""";Pravdova;13426;;yes;platform;;5161731846;2
+49.1491526;15.0030851;"""Jindřichův Hradec, Pravdova""";Pravdova;13426;;yes;platform;;5161731847;6
+49.1492874;15.0033315;"""Jindřichův Hradec, Pravdova""";Pravdova;13426;;yes;platform;;9174048223;5
+49.1494962;15.0039456;"""Jindřichův Hradec, Pravdova""";Pravdova;13426;;yes;platform;;7146421096;4
+49.1493761;15.0037137;"""Jindřichův Hradec, Pravdova""";Pravdova;13426;;yes;platform;;9174048224;3
+49.1643594;14.6698094;"""Veselí n. Luž., Horusice""";Horusice;39230;;yes;platform;;6365300000;
+49.1644411;14.6697692;"""Veselí n. Luž., Horusice""";Horusice;39230;;yes;platform;;10741509911;
+49.1130691;14.2192844;"""Libějovice, Černěves, rozc. 1.0""";"""Libějovice, Černěves, rozcestí 1.0""";18148;;yes;platform;;6757211163;
+49.1128428;14.2193212;"""Libějovice, Černěves, rozc. 1.0""";"""Libějovice, Černěves, rozcestí 1.0""";18148;;yes;platform;;10736739686;
+49.1501425;15.2333669;"""Strmilov, Malý Jeníkov""";Malý Jeníkov;33538;;yes;platform;;9492192823;
+49.1502178;15.2332810;"""Strmilov, Malý Jeníkov""";Malý Jeníkov;33538;;yes;platform;;9492192826;
+49.1534168;15.2250839;"""Strmilov, Malý Jeníkov, samoty""";"""Malý Jeníkov, samoty""";33539;;yes;platform;;9492192824;
+49.1533631;15.2250437;"""Strmilov, Malý Jeníkov, samoty""";"""Malý Jeníkov, samoty""";33539;;yes;platform;;9492192825;
+49.1590435;15.2020453;"""Strmilov, aut. st.""";"""Strmilov, autobusové stanoviště""";33533;;yes;platform;;2423065346;
+49.1589101;15.2020929;"""Strmilov, aut. st.""";"""Strmilov, autobusové stanoviště""";33533;;yes;platform;;9492192827;
+49.1493000;15.0063248;"""Jindřichův Hradec, Claudiusova""";Claudiusova;52515;;yes;platform;;5161700999;
+49.1449207;15.0084344;"""Jindřichův Hradec, Jitřenka""";Jitřenka;52514;;yes;platform;;5161627353;
+49.1448806;15.0081190;"""Jindřichův Hradec, Jitřenka""";Jitřenka;52514;;yes;platform;;1448497214;
+49.1431452;15.0042325;"""Jindřichův Hradec, nábřeží""";nábřeží;13420;;yes;platform;;9174048198;
+49.1430412;15.0039936;"""Jindřichův Hradec, nábřeží""";nábřeží;13420;;yes;platform;;2422046899;
+49.1430149;15.0042609;"""Jindřichův Hradec, nábřeží""";nábřeží;13420;;yes;platform;;5161647681;
+49.1400493;15.0102119;"""Jindřichův Hradec, Jáchymova""";Jáchymova;13408;;yes;platform;;610889588;
+49.1405333;15.0117097;"""Jindřichův Hradec, Jáchymova""";Jáchymova;13408;;yes;platform;;610889693;
+49.1410837;15.0167934;"""Jindřichův Hradec, sídl. Vajgar-Merkur""";sídliště Vajgar-Merkur;13433;;yes;platform;;9174048291;
+49.1411449;15.0165764;"""Jindřichův Hradec, sídl. Vajgar-Merkur""";sídliště Vajgar-Merkur;13433;;yes;platform;;5197126445;
+49.1427568;15.0213044;"""Jindřichův Hradec, sídl. Vajgar-bazén""";sídliště Vajgar-bazén;64238;;yes;platform;;5194737741;
+49.1432634;15.0221591;"""Jindřichův Hradec, sídl. Vajgar-bazén""";sídliště Vajgar-bazén;64238;;yes;platform;;5194709810;
+49.1454989;15.0340403;"""Jindřichův Hradec, Jitka a.s. rozc.""";Jitka a.s. rozcestí;13412;;yes;platform;;3248441984;
+49.1454653;15.0337057;"""Jindřichův Hradec, Jitka a.s. rozc.""";Jitka a.s. rozcestí;13412;;yes;platform;;9174048127;
+49.1432616;15.0341583;"""Jindřichův Hradec, sídliště Otín""";sídliště Otín;64285;;yes;platform;;2422190846;
+49.1437451;15.0340695;"""Jindřichův Hradec, sídliště Otín""";sídliště Otín;64285;;yes;platform;;9174048128;
+49.1382800;15.0454820;"""Jindřichův Hradec, Otín, rozc. 0.1""";"""Otín, rozcestí""";13453;;yes;platform;;2422236535;
+49.1381935;15.0456947;"""Jindřichův Hradec, Otín, rozc. 0.1""";"""Otín, rozcestí""";13453;;yes;platform;;6224789019;
+49.0799753;15.4325781;"""Dačice, Havlíčkovo nám.""";"""Dačice, Havlíčkovo náměstí""";5333;;yes;platform;;2331101735;1
+49.0801690;15.4527075;"""Dačice, Strojírenská rozc.""";"""Dačice, Strojírenská rozcestí""";5332;;yes;platform;;6219290974;
+49.0802569;15.4526596;"""Dačice, Strojírenská rozc.""";"""Dačice, Strojírenská rozcestí""";5332;;yes;platform;;9524487749;
+49.0836862;15.4377107;;;5331;;yes;platform;;9524487746;2
+49.0835025;15.4377708;;;5331;;yes;platform;;9524487745;3
+49.0833564;15.4378186;;;5331;;yes;platform;;9524487744;4
+49.0833783;15.4379737;;;5331;;yes;platform;;9972796216;8
+49.0835244;15.4379259;;;5331;;yes;platform;;4371650081;7
+49.0837081;15.4378658;;;5331;;yes;platform;;9972809117;6
+49.0838706;15.4378126;;;5331;;yes;platform;;9972809118;5
+49.0837304;15.4380235;;;5331;;yes;platform;;9972796213;10
+49.0835467;15.4380836;;;5331;;yes;platform;;9972796214;11
+49.0834006;15.4381314;;;5331;;yes;platform;;9972796215;12
+49.0838929;15.4379703;;;5331;;yes;platform;;9972796212;9
+49.0838488;15.4376575;;;5331;;yes;platform;;9524487747;1
+49.1535833;15.2861338;"""Horní Němčice, rozc. Maršov""";"""Horní Němčice, rozcestí Maršov""";33757;;yes;platform;;9492152589;
+49.1535093;15.2859808;"""Horní Němčice, rozc. Maršov""";"""Horní Němčice, rozcestí Maršov""";33757;;yes;platform;;9492152588;
+49.1533199;15.2861405;"""Horní Němčice, rozc. Maršov""";"""Horní Němčice, rozcestí Maršov""";33757;;yes;platform;;9492152587;
+49.4514682;14.8687175;"""Dolní Hořice, Hartvíkov""";Hartvíkov;6519;;yes;platform;;302803296;
+49.4514266;14.8687773;"""Dolní Hořice, Hartvíkov""";Hartvíkov;6519;;yes;platform;;10741509942;
+49.4897575;14.2412777;"""Kostelec n. Vlt., Sobědraž, rozc. s. 19""";"""Kostelec nad Vltavou, Sobědraž, rozcestí s. 19""";;;yes;platform;;10689846341;A
+49.3136749;13.8973885;"""Radomyšl, rozc. Chrášťovice Klínovice 1.1""";"""Radomyšl, rozcestí Chrášťovice Klínovice 1.1""";;;yes;platform;;10689847258;
+49.5168340;14.5829260;"""Borotín, Sychrov, rozc. Boratkov""";"""Borotín, Sychrov, rozcestí Boratkov""";;;yes;platform;;4445533023;B
+49.5168880;14.5829140;"""Borotín, Sychrov, rozc. Boratkov""";"""Borotín, Sychrov, rozcestí Boratkov""";;;yes;platform;;10690708092;A
+49.5227525;14.5691566;"""Borotín, Libenice, Nové Libenice""";Nové Libenice;55057;;yes;platform;;3699681082;
+49.5228034;14.5691726;"""Borotín, Libenice, Nové Libenice""";Nové Libenice;55057;;yes;platform;;10741509934;
+49.4667280;14.7356290;"""Ratibořské Hory, Podolí, rozc. 0.3""";"""Ratibořské Hory, Podolí, rozcestí 0.3""";;;yes;platform;;824091958;1
+49.4667430;14.7359220;"""Ratibořské Hory, Podolí, rozc. 0.3""";"""Ratibořské Hory, Podolí, rozcestí 0.3""";;;yes;platform;;10690713533;2
+49.4727309;14.7453354;"""Ratibořské Hory, Ratibořice, rozc. 1.5""";"""Ratibořské Hory, Ratibořice, rozcestí 1.5""";29659;;yes;platform;;824091975;
+49.4726742;14.7453852;"""Ratibořské Hory, Ratibořice, rozc. 1.5""";"""Ratibořské Hory, Ratibořice, rozcestí 1.5""";29659;;yes;platform;;9104785159;
+49.4858360;14.7549920;"""Hlasivo, Hlasivko, rozc. 1.0""";"""Hlasivo, Hlasivko, rozcestí 1.0""";;;yes;platform;;10690713543;1
+49.4858700;14.7550850;"""Hlasivo, Hlasivko, rozc. 1.0""";"""Hlasivo, Hlasivko, rozcestí 1.0""";;;yes;platform;;10690713552;2
+49.5091320;14.7847730;"""Mladá Vožice, Blanice, rozc. 1.0""";"""Mladá Vožice, Blanice, rozcestí 1.0""";;;yes;platform;;10690713542;B
+49.5091740;14.7846930;"""Mladá Vožice, Blanice, rozc. 1.0""";"""Mladá Vožice, Blanice, rozcestí 1.0""";;;yes;platform;;10690713544;A
+49.5173910;14.7935750;"""Mladá Vožice, rozc. Řemíčov 1.0""";"""Mladá Vožice, rozcestí Řemíčov 1.0""";;;yes;platform;;10690713539;1
+49.5173530;14.7933920;"""Mladá Vožice, rozc. Řemíčov 1.0""";"""Mladá Vožice, rozcestí Řemíčov 1.0""";;;yes;platform;;10690713548;2
+49.4141244;14.6742466;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277148;13
+49.4142322;14.6741174;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908288563;19
+49.4143387;14.6743157;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908288564;20
+49.4144298;14.6744813;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908288565;21
+49.4138700;14.6745595;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3751759457;1
+49.4139658;14.6747342;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277128;2
+49.4140617;14.6748997;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277129;3
+49.4141446;14.6747960;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277132;7
+49.4140558;14.6746250;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277131;6
+49.4139574;14.6744414;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3751759458;5
+49.4140369;14.6743576;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277140;9
+49.4141292;14.6745377;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277141;10
+49.4142286;14.6747050;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277144;11
+49.4143351;14.6748906;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277143;12
+49.4144085;14.6747815;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277153;17
+49.4139244;14.6753322;"""Tábor, aut. nádr.""";"""Tábor, autobusové nádraží""";35313;;yes;platform;;252552646;MHD
+49.4142570;14.6744958;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908277150;15
+49.4145281;14.6746614;"""Tábor, aut.nádr.""";"""Tábor, autobusové nádraží""";;;yes;platform;;3908288566;22
+49.4706802;14.6469969;"""Chotoviny, Liderovice""";Liderovice;11878;;yes;platform;;6973964312;
+49.4705919;14.6470856;"""Chotoviny, Liderovice""";Liderovice;11878;;yes;platform;;9729271077;
+49.4943245;14.6810662;"""Chotoviny, Sedléčko""";Sedlečko;11882;;yes;platform;;250587481;
+49.4943053;14.6811656;"""Chotoviny, Sedléčko""";Sedlečko;11882;;yes;platform;;10741509939;
+49.5437770;14.7635470;Zhoř u Ml. Vožice;Zhoř u Mladé Vožice;;;yes;platform;;10690713519;2
+49.5436780;14.7635690;Zhoř u Ml. Vožice;Zhoř u Mladé Vožice;;;yes;platform;;10690713520;1
+49.5473370;14.7515690;"""Oldřichov, Těmice rozc. 1.0""";"""Oldřichov, Těmice rozcestí 1.0""";;;yes;platform;;10690713522;1
+49.5386216;14.7239093;"""Nová Ves u Ml. Vožice, Horní Střítež""";Horní Střítež;23719;;yes;platform;;6969751467;
+49.5386914;14.7237348;"""Nová Ves u Ml. Vožice, Horní Střítež""";Horní Střítež;23719;;yes;platform;;10741509908;
+49.4789919;14.6557597;"""Chotoviny, Rzavá""";Rzavá;11880;;yes;platform;;8279649220;
+49.4789684;14.6559535;"""Chotoviny, Rzavá""";Rzavá;11880;;yes;platform;;8279649221;
+49.4730604;14.6579683;"""Chotoviny, rozc. 2.0""";"""Chotoviny,,rozc.2.0""";;;yes;platform;;3607940259;
+49.4723691;14.6585688;"""Chotoviny, rozc. 2.0""";"""Chotoviny, rozc.2.0""";;;yes;platform;;4121580824;
+49.4675387;14.5611016;"""Jistebnice, Vlásenice, Makov rozc. 1.5""";"""Jistebnice, Vlásenice, Makov rozcestí 1.5""";;;yes;platform;;251736579;
+49.4675862;14.5610458;"""Jistebnice, Vlásenice, Makov rozc. 1.5""";"""Jistebnice, Vlásenice, Makov rozcestí 1.5""";;;yes;platform;;10690708097;
+49.3318636;14.8233775;"""Choustník, Kajetín, rozc. 0.5""";"""Kajetín, rozcestí 0.5""";11905;;yes;platform;;827195226;
+49.3319312;14.8234769;"""Choustník, Kajetín, rozc. 0.5""";"""Kajetín, rozcestí 0.5""";11905;;yes;platform;;10741509906;
+49.4292648;14.7184403;"""Tábor, Hlinice""";Hlinice;;;yes;platform;;3634343707;1
+49.4293820;14.7190320;"""Tábor, Hlinice""";Hlinice;;;yes;platform;;824091955;2
+49.4232600;14.7035260;"""Tábor, Záluží""";Záluží;;;yes;platform;;3634343703;1
+49.4231530;14.7036910;"""Tábor, Záluží""";Záluží;;;yes;platform;;3634343704;2
+49.5921703;14.7912890;"""Šebířov, Křekovická Lhota, rozc. 0.5""";"""Šebířov, Křekovická Lhota, rozcestí 0.5""";49160;;yes;platform;;10741509927;
+49.5920993;14.7913054;"""Šebířov, Křekovická Lhota, rozc. 0.5""";"""Šebířov, Křekovická Lhota, rozcestí 0.5""";49160;;yes;platform;;10741509928;
+49.5453220;14.8433080;"""Běleč, Elbančice, rozc. 1.0""";"""Běleč, Elbančice, rozcestí 1.0""";;;yes;platform;;60283151;B
+49.5452420;14.8433430;"""Běleč, Elbančice, rozc. 1.0""";"""Běleč, Elbančice, rozcestí 1.0""";;;yes;platform;;10690713574;A
+49.5555990;14.8459470;"""Běleč, Bzová, rozc.""";"""Běleč, Bzová, rozcestí""";;;yes;platform;;277461326;B
+49.5555610;14.8463830;"""Běleč, Bzová, rozc.""";"""Běleč, Bzová, rozcestí""";;;yes;platform;;10690713573;A
+49.5285951;14.8506098;"""Mladá Vožice, Staniměřice""";Staniměřice;21426;;yes;platform;;609948560;
+49.5285581;14.8506771;"""Mladá Vožice, Staniměřice""";Staniměřice;21426;;yes;platform;;10741509931;
+49.4065615;14.8105771;"""Chýnov, nám.""";"""Chýnov, náměstí""";12252;;yes;platform;;3262160651;
+49.4064938;14.8108013;"""Chýnov, nám.""";"""Chýnov, náměstí""";12252;;yes;platform;;3262160652;
+49.4803086;14.5472044;"""Jistebnice, Tisová rozc. 1.0""";"""Jistebnice, Tisová rozcestí 1.0""";;;yes;platform;;4445533020;A
+49.4803069;14.5482817;"""Jistebnice, Tisová rozc. 1.0""";"""Jistebnice, Tisová rozcestí 1.0""";;;yes;platform;;4445533021;B
+49.5983782;14.7795390;"""Šebířov, Kříženec, rozc. 0.5""";"""Šebířov, Kříženec, rozcestí 0.5""";34666;;yes;platform;;10741509925;
+49.5983119;14.7795630;"""Šebířov, Kříženec, rozc. 0.5""";"""Šebířov, Kříženec, rozcestí 0.5""";34666;;yes;platform;;10741509926;
+49.4552230;14.5885100;"""Balkova Lhota, Knížata rozc. 1.0""";"""Balkova Lhota, Knížata rozcestí 1.0""";;;yes;platform;;4445533007;A
+49.4553070;14.5885770;"""Balkova Lhota, Knížata rozc. 1.0""";"""Balkova Lhota, Knížata rozcestí 1.0""";;;yes;platform;;10690713513;B
+49.5209348;14.8134808;"""Mladá Vožice, Dubina, rozc. 0.5""";"""Dubina, rozcestí 0.5""";21420;;yes;platform;;2960622033;
+49.5209767;14.8136348;"""Mladá Vožice, Dubina, rozc. 0.5""";"""Dubina, rozcestí 0.5""";21420;;yes;platform;;8725372187;
+49.3164787;13.9301357;"""Radomyšl, nákup. stř.""";"""Radomyšl, nákupní středisko""";;;yes;platform;;6630276106;
+49.3163586;13.9291036;"""Radomyšl, nákup. stř.""";"""Radomyšl, nákupní středisko""";;;yes;platform;;6630276105;
+49.4445950;14.7027950;"""Tábor, Hlinice, rozc. 2.0""";"""Tábor, Hlinice, rozcestí 2.0""";;;yes;platform;;10690713530;1
+49.4445723;14.7029064;"""Tábor, Hlinice, rozc. 2.0""";"""Tábor, Hlinice, rozcestí 2.0""";;;yes;platform;;10690713532;2
+49.4586896;14.7269217;"""Chotoviny, Jeníčkova Lhota, háj.""";"""Chotoviny, Jeníčkova Lhota, hájovna""";11877;;yes;platform;;824091957;
+49.4587472;14.7269139;"""Chotoviny, Jeníčkova Lhota, háj.""";"""Chotoviny, Jeníčkova Lhota, hájovna""";11877;;yes;platform;;9104785158;
+49.4910429;14.4824485;"""Nadějkov, Brtec, rozc.""";"""Brtec, rozcestí""";22452;;yes;platform;;4453492470;
+49.4909704;14.4822732;"""Nadějkov, Brtec, rozc.""";"""Brtec, rozcestí""";22452;;yes;platform;;8725711451;
+49.4912290;14.4759006;"""Nadějkov, Hronova Vesec, rozc. 1.0""";"""Hronova Vesec, rozcestí 1.0""";22453;;yes;platform;;300807232;
+49.4911436;14.4758520;"""Nadějkov, Hronova Vesec, rozc. 1.0""";"""Hronova Vesec, rozcestí 1.0""";22453;;yes;platform;;8725711449;
+49.2590680;14.7196198;"""Soběslav, nám. hotel Slunce""";"""Soběslav, náměstí hotel Slunce""";32357;;yes;platform;;6364695702;
+49.2594438;14.7205477;"""Soběslav, nám. U Husa""";"""Soběslav, náměstí U Husa""";32358;;yes;platform;;6364695709;
+49.0509804;14.4639314;"""Hluboká n. Vlt., žel. st.""";"""Hluboká nad Vltavou, železniční stanice""";49134;;yes;platform;;9270017380;
+49.2405100;14.4965244;"""Čenkov u Bech., Malý Čenkov""";"""Čenkov u Bechyně, Malý Čenkov""";4388;;yes;platform;;9852965251;
+49.2342887;14.5004090;Čenkov u Bech.;Čenkov u Bechyně;4387;;yes;platform;;9852965252;
+49.2342536;14.5002692;Čenkov u Bech.;Čenkov u Bechyně;4387;;yes;platform;;9852965253;
+49.2920850;14.4816676;"""Sudoměřice u Bech.,,nákl.nádr.Bechyně I""";Nákladové nádraží Bechyně I;682;;yes;platform;;9009640268;
+49.2920006;14.4816058;"""Sudoměřice u Bech.,,nákl.nádr.Bechyně I""";Nákladové nádraží Bechyně I;682;;yes;platform;;9009640270;
+49.2915878;14.4803205;"""Sudoměřice u Bech.,,nákl.nádr.Bechyně II""";Nákladové nádraží Bechyně II;683;;yes;platform;;9009640269;
+49.2916137;14.4802446;"""Sudoměřice u Bech.,,nákl.nádr.Bechyně II""";Nákladové nádraží Bechyně II;683;;yes;platform;;9009640271;
+49.5201002;14.8902669;"""Smilovy Hory, Obrátice, rozc. 1.0""";"""Smilovy Hory, Obrátice, rozcestí 1.0""";32238;;yes;platform;;10741487096;
+49.5201070;14.8903740;"""Smilovy Hory, Obrátice, rozc. 1.0""";"""Smilovy Hory, Obrátice, rozcestí 1.0""";32238;;yes;platform;;10741487097;
+49.5164150;14.4858680;"""Nadějkov, Kaliště, rozc. 1.0""";"""Nadějkov, Kaliště, rozcestí 1.0""";;;yes;platform;;10690708088;B
+49.3447831;14.7168265;"""Planá n. Luž., Strkov""";"""Planá nad Lužnicí, Strkov""";26755;;yes;platform;;3742898332;
+49.3449339;14.7168297;"""Planá n. Luž., Strkov""";"""Planá nad Lužnicí, Strkov""";26755;;yes;platform;;9969151993;
+49.3381273;14.7265724;"""Planá n. Luž., Strkov, sádky""";"""Planá nad Lužnicí, Strkov, sádky""";26756;;yes;platform;;9729270154;
+49.3377790;14.7267906;"""Planá n. Luž., Strkov, sádky""";"""Planá nad Lužnicí, Strkov, sádky""";26756;;yes;platform;;8294224022;
+49.0511993;14.4439783;"""Hluboká n. Vlt., Sportovní areál""";"""Hluboká nad Vltavou, Sportovní areál""";49133;;yes;platform;;9270017379;
+49.0506178;14.4439536;"""Hluboká n. Vlt., Sportovní areál""";"""Hluboká nad Vltavou, Sportovní areál""";49133;;yes;platform;;9270017378;
+49.0538807;14.4462744;"""Hluboká n. Vlt., Zámostí most""";"""Hluboká nad Vltavou, Zámostí most""";8918;;yes;platform;;9270017383;
+49.0539153;14.4460958;"""Hluboká n. Vlt., Zámostí most""";"""Hluboká nad Vltavou, Zámostí most""";8918;;yes;platform;;9270017384;
+49.3000685;14.6248984;"""Hlavatce, Vyhnanice, rozc. 2.0""";"""Hlavatce, Vyhnanice, rozcestí 2.0""";8782;;yes;platform;;9123902771;
+49.3001292;14.6251156;"""Hlavatce, Vyhnanice, rozc. 2.0""";"""Hlavatce, Vyhnanice, rozcestí 2.0""";8782;;yes;platform;;9123902770;
+49.3217072;14.5864854;"""Skrýchov u Malšic, Dudov""";Dudov;31717;;yes;platform;;10741509943;
+49.3225958;14.5876240;"""Skrýchov u Malšic, Dudov""";Dudov;31717;;yes;platform;;10741509945;
+49.3226545;14.5875369;"""Skrýchov u Malšic, Dudov""";Dudov;31717;;yes;platform;;10741509944;
+49.3591745;14.5437962;"""Malšice, Dobřejice, háj.""";"""Dobřejice, hájovna""";20313;;yes;platform;;602334660;
+49.3591298;14.5437682;"""Malšice, Dobřejice, háj.""";"""Dobřejice, hájovna""";20313;;yes;platform;;10741509936;
+49.0550861;14.4292581;"""Hluboká n. Vlt., škola""";"""Hluboká nad Vltavou, škola""";8915;;yes;platform;;9270017373;
+49.0365315;14.4314735;"""Hluboká n.Vlt., žel.st., rozc.1.0""";"""Hluboká nad Vltavou, železniční stanice, rozcestí (1,0 km)""";;;;;;3696634851;
+49.0363873;14.4311791;"""Hluboká n.Vlt., žel.st., rozc.1.0""";"""Hluboká nad Vltavou, železniční stanice, rozcestí (1,0 km)""";;;;;;3696634852;
+48.7670451;14.4718069;"""Střítež, Raveň, rozc. 0.5""";Raveň;33709;;yes;platform;;7744527385;
+48.7666694;14.4723226;"""Střítež, Raveň, rozc. 0.5""";Raveň;33709;;yes;platform;;7744527386;
+48.7619351;14.4757952;"""Kaplice, Hubenov""";Hubenov;13955;;yes;platform;;7744494984;
+48.7615760;14.4758092;"""Kaplice, Hubenov""";Hubenov;13955;;yes;platform;;7744494983;
+48.7449840;14.4910385;"""Kaplice, sídl. 9. května""";"""Kaplice, sídliště 9. května""";52060;;yes;platform;;8586819904;
+48.7448370;14.4910557;"""Kaplice, sídl. 9. května""";"""Kaplice, sídliště 9. května""";52060;;yes;platform;;8586819903;
+48.7386737;14.4934828;"""Kaplice, nám.""";"""Kaplice, náměstí""";52059;;yes;platform;;8586804730;
+48.7302878;14.5080917;"""Kaplice, Mostky, samoty""";"""Mostky, samoty""";13959;;yes;platform;;8586804731;
+48.7303007;14.5082550;"""Kaplice, Mostky, samoty""";"""Mostky, samoty""";13959;;yes;platform;;8586804732;
+49.0546659;14.4276314;"""Hluboká n. Vlt., pod hotelem""";"""Hluboká nad Vltavou, pod hotelem""";8912;;yes;platform;;3696628472;
+49.0548850;14.4277545;"""Hluboká n. Vlt., pod hotelem""";"""Hluboká nad Vltavou, pod hotelem""";8912;;yes;platform;;3696628471;
+49.0310754;14.2619692;"""Němčice, Sedlovice, rozc.1.0""";"""Němčice, Sedlovice, rozcestí 1.0""";22855;;yes;platform;;8357455024;
+49.0311937;14.2615440;"""Němčice, Sedlovice, rozc.1.0""";"""Němčice, Sedlovice, rozcestí 1.0""";22855;;yes;platform;;8357455023;
+49.0348647;14.2482432;"""Babice, Zvěřetice, rozc. 1.0""";"""Babice, Zvěřetice, rozcestí 1.0""";201;;yes;platform;;10055563770;
+49.4438718;14.8245827;"""Dolní Hořice, Chotčiny, rozc. 0.5""";"""Chotčiny, rozcestí""";6522;;yes;platform;;364637908;
+49.4437942;14.8245073;"""Dolní Hořice, Chotčiny, rozc. 0.5""";"""Chotčiny, rozcestí""";6522;;yes;platform;;10741509941;
+49.3676965;14.7321222;"""Planá n. Luž., Kravín""";"""Planá nad Lužnicí, Kravín""";37149;;yes;platform;;9969151979;
+49.3678442;14.7324742;"""Planá n. Luž., Kravín""";"""Planá nad Lužnicí, Kravín""";37149;;yes;platform;;3911495959;
+49.3628672;14.7199202;"""Planá n. Luž., Svit""";"""Planá nad Lužnicí, Svit""";26753;;yes;platform;;9969152005;
+49.3626142;14.7194568;"""Planá n. Luž., Svit""";"""Planá nad Lužnicí, Svit""";26753;;yes;platform;;674299069;
+49.3598253;14.7143902;"""Planá n. Luž., Chýnovská""";"""Planá nad Lužnicí, Chýnovská""";55732;;yes;platform;;4779029715;
+49.3596859;14.7143356;"""Planá n. Luž., Chýnovská""";"""Planá nad Lužnicí, Chýnovská""";55732;;yes;platform;;9969152004;
+49.3590418;14.7084075;"""Planá n. Luž., Masokombinát točna""";"""Planá nad Lužnicí, Masokombinát točna""";26748;;yes;platform;;9406108782;
+49.3589416;14.7082870;"""Planá n. Luž., Masokombinát točna""";"""Planá nad Lužnicí, Masokombinát točna""";26748;;yes;platform;;4779029711;
+49.3616627;14.7061205;"""Planá n. Luž., Masokombinát záv.""";"""Planá nad Lužnicí, Masokombinát závod""";26749;;yes;platform;;4779029712;
+49.3612978;14.7061575;"""Planá n. Luž., Masokombinát záv.""";"""Planá nad Lužnicí, Masokombinát závod""";26749;;yes;platform;;9406108783;
+49.3498337;14.6964589;"""Planá n. Luž., u lesa""";"""Planá nad Lužnicí, u lesa""";47552;;yes;platform;;9725063312;
+49.3497903;14.6965216;"""Planá n. Luž., u lesa""";"""Planá nad Lužnicí, u lesa""";47552;;yes;platform;;9725063313;
+49.3547980;14.6840843;"""Planá n. Luž., Lhota Samoty""";"""Planá nad Lužnicí, Lhota Samoty""";26754;;yes;platform;;9969151977;
+49.3547294;14.6841845;"""Planá n. Luž., Lhota Samoty""";"""Planá nad Lužnicí, Lhota Samoty""";26754;;yes;platform;;9969151978;
+49.3869152;14.6238747;"""Slapy, rozc.""";"""Slapy, rozcestí""";31877;;yes;platform;;9725081257;
+49.3870142;14.6238521;"""Slapy, rozc.""";"""Slapy, rozcestí""";31877;;yes;platform;;9725081258;
+49.3729163;14.7041445;"""Planá n. Luž., Silon""";"""Planá nad Lužnicí, Silon""";26751;;yes;platform;;2883601287;
+49.3733836;14.7049839;"""Planá n. Luž., Silon""";"""Planá nad Lužnicí, Silon""";26751;;yes;platform;;9406108803;
+49.3665831;14.7009698;"""Planá n. Luž., hřbitov""";"""Planá nad Lužnicí, hřbitov""";26746;;yes;platform;;9406108801;
+49.3666958;14.7011080;"""Planá n. Luž., hřbitov""";"""Planá nad Lužnicí, hřbitov""";26746;;yes;platform;;4779029714;
+49.3635223;14.7034946;"""Planá n. Luž., MADETA""";"""Planá nad Lužnicí, Madeta""";26747;;yes;platform;;9406108800;
+49.3531323;14.7027973;"""Planá n. Luž., nám.""";"""Planá nad Lužnicí, náměstí""";26750;;yes;platform;;4779029709;1
+49.3532370;14.7029477;"""Planá n. Luž., nám.""";"""Planá nad Lužnicí, náměstí""";26750;;yes;platform;;9969151992;2
+48.7749253;14.4654157;"""Střítež,Kaplice-nádraží,rozc.0.3""";"""Kaplice-nádraží, rozc. 0.3""";;;yes;platform;;10785240488;
+48.7748414;14.4657042;"""Střítež,Kaplice-nádraží,rozc.0.3""";"""Kaplice-nádraží, rozc. 0.3""";;;yes;platform;;10785240487;
+48.6618887;14.4539862;"""Dolní Dvořiště, Rychnov nad Malší, rozc.""";"""Dolní Dvořiště, Rychnov nad Malší, rozcestí""";;;yes;platform;;7377468666;
+48.6618538;14.4538713;"""Dolní Dvořiště, Rychnov nad Malší, rozc.""";"""Dolní Dvořiště, Rychnov nad Malší, rozcestí""";;;yes;platform;;7377468667;
+48.7748336;14.4683315;"""Střítež,Kaplice-nádraží,žel.st.""";"""Kaplice-nádraží, žel. st.""";;;yes;platform;;10785240502;
+48.7748890;14.4686315;"""Střítež,Kaplice-nádraží,žel.st.""";"""Kaplice-nádraží, žel. st.""";;;yes;platform;;10785240503;
+48.6774741;14.4502677;"""Bujanov, Suchdol, rozc.""";"""Bujanov, Suchdol, rozcestí""";;;yes;platform;;7377468669;
+48.6776785;14.4505997;"""Bujanov, Suchdol, rozc.""";"""Bujanov, Suchdol, rozcestí""";;;yes;platform;;7377468668;
+49.3433398;14.2121828;"""Záhoří, Horní Záhoří, ObÚ""";"""Záhoří, Horní Záhoří, obecní úřad""";;;;;;5491675737;
+49.3433735;14.2124063;"""Záhoří, Horní Záhoří, ObÚ""";"""Záhoří, Horní Záhoří, obecní úřad""";;;;;;5491675736;
+49.0882689;14.7277344;"""Lomnice n. Luž., žel. st.""";"""Lomnice nad Lužnicí, železniční stanice""";;;;;;5772864571;
+49.0190171;13.9972010;"""Prachatice, nám. Přátelství""";"""Prachatice, náměstí Přátelství""";28049;;yes;platform;;5028594459;
+49.0189550;13.9968532;"""Prachatice, nám. Přátelství""";"""Prachatice, náměstí Přátelství""";28049;;yes;platform;;5028594458;
+49.0138569;14.0050512;"""Prachatice, aut. nádr.""";5;28040;;yes;platform;;802738830;5
+49.0138999;14.0050870;"""Prachatice, aut. nádr.""";6;28040;;yes;platform;;10134776253;6
+49.0138107;14.0050140;"""Prachatice, aut. nádr.""";4;28040;;yes;platform;;10134776252;4
+49.0137661;14.0049774;"""Prachatice, aut. nádr.""";3;28040;;yes;platform;;10134776251;3
+49.0137157;14.0049393;"""Prachatice, aut. nádr.""";2;28040;;yes;platform;;10134776250;2
+49.0139492;14.0051237;"""Prachatice, aut. nádr.""";7;28040;;yes;platform;;10134776254;7
+49.0139426;13.9993972;"""Prachatice, Malé nám.""";"""Prachatice, Malé náměstí""";28047;;yes;platform;;5028594464;
+49.0153444;14.0084627;"""Prachatice, žel. st.""";"""Prachatice, železniční stanice""";28056;;yes;platform;;5028594474;
+49.2559357;14.3081871;Albrechtice n. Vlt.;Albrechtice nad Vltavou;63;;yes;platform;;9873063770;
+49.2556644;14.3080346;Albrechtice n. Vlt.;Albrechtice nad Vltavou;63;;yes;platform;;9873063771;
+48.8946117;14.2227412;"""Vrábče, Nová hospoda""";Nová hospoda;;;yes;platform;;4937980382;
+49.0009310;14.0132119;"""Prachatice, Kandlův mlýn rozc. 0.3""";"""Prachatice, Kandlův mlýn rozcestí 0.3""";28042;;yes;platform;;5028594470;
+49.0009080;14.0130014;"""Prachatice, Kandlův mlýn rozc. 0.3""";"""Prachatice, Kandlův mlýn rozcestí 0.3""";28042;;yes;platform;;5028594471;
+49.5023918;14.2929726;"""Hrejkovice, Pechova Lhota, rozc.""";"""Hrejkovice, Pechova Lhota, rozcestí""";;;yes;platform;;10689913286;
+49.5024910;14.2930460;"""Hrejkovice, Pechova Lhota, rozc.""";"""Hrejkovice, Pechova Lhota, rozcestí""";;;yes;platform;;10689913287;
+49.4684486;14.3071289;"""Hrejkovice, Chlumek, rozc. 0.8""";"""Hrejkovice, Chlumek, rozcestí 0.8""";;;yes;platform;;10689846326;A
+49.4686966;14.3066874;"""Hrejkovice, Chlumek, rozc. 0.8""";"""Hrejkovice, Chlumek, rozcestí 0.8""";;;yes;platform;;10689846327;B
+49.5458031;14.0497475;"""Mirovice, Ohař, rozc. 1.0""";"""Mirovice, Ohař, rozcestí 1.0""";;;yes;platform;;10689846365;B
+49.5457115;14.0494814;"""Mirovice, Ohař, rozc. 1.0""";"""Mirovice, Ohař, rozcestí 1.0""";;;yes;platform;;10689846363;A
+49.5235940;14.0032510;"""Mirovice, Ráztely, rozc. 2.0""";"""Mirovice, Ráztely, rozcestí 2.0""";;;yes;platform;;9811794896;B
+49.5123215;13.9626188;"""Mišovice, Draheničky, rozc.""";"""Mišovice, Draheničky, rozcestí""";;;yes;platform;;10689913279;
+49.5123558;13.9627972;"""Mišovice, Draheničky, rozc.""";"""Mišovice, Draheničky, rozcestí""";;;yes;platform;;10689913280;
+49.5005608;13.9493837;"""Mišovice, Draheničky, rozc. Hostišovice 2.0""";"""Mišovice, Draheničky, rozcestí Hostišovice 2.0""";;;yes;platform;;10689913277;
+49.5005913;13.9494886;"""Mišovice, Draheničky, rozc. Hostišovice 2.0""";"""Mišovice, Draheničky, rozcestí Hostišovice 2.0""";;;yes;platform;;10689913278;
+49.4651423;14.0688388;"""Čimelice, nám.""";"""Čimelice, náměstí""";;;yes;platform;;10689846375;B
+49.4648080;14.0686297;"""Čimelice, nám.""";"""Čimelice, náměstí""";;;yes;platform;;10689846374;A
+48.7895331;13.9513456;"""Nová Pec, žel.st.""";"""Nová Pec, železniční stanice""";;;yes;stop_position;;3744149915;
+49.4757271;14.3648605;"""Přeborov, rozc. 0.5""";"""Přeborov, rozcestí 0.5""";;;yes;platform;;10689846331;A
+49.4757958;14.3650475;"""Přeborov, rozc. 0.5""";"""Přeborov, rozcestí 0.5""";;;yes;platform;;10689846332;B
+49.5211525;14.0726633;"""Lety, rozc. 1.3 sil. č. 4""";"""Lety, rozcestí 1.3 sil. č. 4""";;;yes;platform;;10689846372;B
+49.5209084;14.0724468;"""Lety, rozc. 1.3 sil. č. 4""";"""Lety, rozcestí 1.3 sil. č. 4""";;;yes;platform;;10689846373;A
+49.5121307;14.0309143;"""Mirovice, rozc. k žel. st.""";"""Mirovice, rozcestí k železniční stanici""";;;yes;platform;;4745864056;B
+49.5119667;14.0309544;"""Mirovice, rozc. k žel. st.""";"""Mirovice, rozcestí k železniční stanici""";;;yes;platform;;4745864057;A
+49.5160534;14.0365144;"""Mirovice, nám.""";"""Mirovice, náměstí""";;;yes;platform;;4737882458;2
+49.3886592;14.6912640;"""Tábor, sídl. Nad Lužnicí E 55""";"""Tábor, sídliště Nad Lužnicí, E55""";35336;;yes;platform;;277065660;
+49.3881948;14.6910649;"""Tábor, sídl. Nad Lužnicí E 55""";"""Tábor, sídliště Nad Lužnicí, E55""";35336;;yes;platform;;277065661;
+49.4917145;14.3638716;"""Zhoř, Zbislav, rozc. 0.5""";"""Zhoř, Zbislav, rozcestí 0.5""";;;yes;platform;;10689846318;A
+49.4917526;14.3640537;"""Zhoř, Zbislav, rozc. 0.5""";"""Zhoř, Zbislav, rozcestí 0.5""";;;yes;platform;;10689846320;B
+49.5132256;14.3593302;"""Chyšky, Hněvanice, rozc. Hrazánky 1.4""";"""Chyšky, Hněvanice, rozcestí Hrazánky 1.4""";;;yes;platform;;10689846315;B
+49.5130997;14.3591700;"""Chyšky, Hněvanice, rozc. Hrazánky 1.4""";"""Chyšky, Hněvanice, rozcestí Hrazánky 1.4""";;;yes;platform;;10689846319;A
+49.5241850;14.3544890;"""Hrazany, Hrazánky, rozc. 1.7""";"""Hrazany, Hrazánky, rozcestí 1.7""";;;yes;platform;;9811666590;A
+49.4195998;14.6605116;"""Tábor, Písecké rozc.""";"""Tábor, Písecké rozcestí""";35335;;yes;platform;;251694591;
+49.4194645;14.6603486;"""Tábor, Písecké rozc.""";"""Tábor, Písecké rozcestí""";35335;;yes;platform;;9406108817;
+49.4204775;14.6516056;"""Tábor, nem.""";"""Tábor, nemocnice""";35331;;yes;platform;;299410418;
+49.4182448;14.6522571;"""Tábor, nem. hl. vchod""";"""Tábor, nemocnice hlavní vchod""";51345;;yes;platform;;251694589;
+49.4126551;14.6647346;"""Tábor, Křižíkovo nám.""";"""Tábor, Křižíkovo náměstí""";35325;;yes;platform;;251695801;
+49.4127993;14.6657273;"""Tábor, Křižíkovo nám.""";"""Tábor, Křižíkovo náměstí""";35325;;yes;platform;;3587907717;
+49.3896143;14.6888106;Sídl. Nad Lužnicí;"""Tábor, sídl. Nad Lužnicí""";51344;;yes;platform;;277065652;
+49.3889135;14.6884289;Sídl. Nad Lužnicí;"""Tábor, sídl. Nad Lužnicí""";51344;;yes;platform;;277065653;
+49.3903589;14.6841644;"""Sídl. Nad Lužnicí, střed""";"""Tábor, sídliště Nad Lužnicí střed""";51447;;yes;platform;;277065656;
+49.3907992;14.6841061;"""Sídl. Nad Lužnicí, střed""";"""Tábor, sídliště Nad Lužnicí střed""";51447;;yes;platform;;277065657;
+49.3854929;14.6843674;"""Sezimovo Ústí, I nám.""";"""Sezimovo Ústí, I náměstí""";51356;;yes;platform;;277065654;
+49.3855669;14.6845899;"""Sezimovo Ústí, I nám.""";"""Sezimovo Ústí, I náměstí""";51356;;yes;platform;;277065655;
+49.3812514;14.6877152;"""Sezimovo Ústí, I rozc.""";"""Sezimovo Ústí, I rozcestí""";51357;;yes;platform;;277065658;
+49.3811780;14.6878728;"""Sezimovo Ústí, I rozc.""";"""Sezimovo Ústí, I rozcestí""";51357;;yes;platform;;277065659;
+49.4143200;14.6591171;"""Tábor, Žižkovo nám.""";"""Tábor, Žižkovo náměstí""";57647;;yes;platform;;9406108832;
+49.1308137;15.0006772;"""Jindřichův Hradec, sídl. Hvězdárna MŠ""";sídliště Hvězdárna MŠ;56636;;yes;platform;;9174048186;
+49.4496123;14.3610025;"""Milevsko, aut. st.""";"""Milevsko, autobusové stanoviště""";21083;;yes;platform;;525564200;16
+49.1335757;15.0000611;"""Jindřichův Hradec, sídl. Hvězdárna""";sídliště Hvězdárna;13430;;yes;platform;;9174048185;
+49.4966202;14.3033962;"""Hrejkovice, Níkovice, rozc. 1.0""";"""Hrejkovice, Níkovice, rozcestí 1.0""";;;yes;platform;;10689913288;
+49.4966545;14.3030348;"""Hrejkovice, Níkovice, rozc. 1.0""";"""Hrejkovice, Níkovice, rozcestí 1.0""";;;yes;platform;;10689913289;
+49.4238208;14.2027265;"""Zvíkovské Podhradí, rozc.""";"""Zvíkovské Podhradí, rozcestí""";;;yes;;;2131126153;
+49.4237291;14.2026390;"""Zvíkovské Podhradí, rozc.""";"""Zvíkovské Podhradí, rozcestí""";;;yes;;;7182717414;
+49.4436952;14.3720348;"""Milevsko, Nádražní sídl. rozc.""";"""Milevsko, Nádražní sídliště rozcestí""";21091;;yes;platform;;9674056873;
+49.4438604;14.3720546;"""Milevsko, Nádražní sídl. rozc.""";"""Milevsko, Nádražní sídliště rozcestí""";21091;;yes;platform;;9674056874;
+49.4948464;14.2312651;"""Kostelec n. Vlt., Zahrádka, rozc.""";"""Kostelec nad Vltavou, Zahrádka, rozcestí""";;;yes;platform;;10689846342;A
+49.4928398;14.2267952;"""Kostelec n. Vlt., Zahrádka""";"""Kostelec nad Vltavou, Zahrádka""";;;yes;platform;;10689846339;A
+49.5012599;14.2119012;"""Kostelec n. Vlt., U rybníka""";"""Kostelec nad Vltavou, U rybníka""";;;yes;platform;;10689846343;
+49.5013352;14.2121573;"""Kostelec n. Vlt., U rybníka""";"""Kostelec nad Vltavou, U rybníka""";;;yes;platform;;10689846346;A
+49.4996874;14.2130678;Kostelec n. Vlt.;Kostelec nad Vltavou;;;yes;platform;;10689846344;
+49.4995651;14.2131023;Kostelec n. Vlt.;Kostelec nad Vltavou;;;yes;platform;;10689846345;
+49.5466080;14.2475710;"""Kovářov, Zahořany, rozc. 1.1""";"""Kovářov, Zahořany, rozcestí 1.1""";;;yes;platform;;10689846354;B
+49.5465546;14.2474957;"""Kovářov, Zahořany, rozc. 1.1""";"""Kovářov, Zahořany, rozcestí 1.1""";;;yes;platform;;10689846357;A
+49.5571480;14.2304106;"""Kovářov, rozc. Klučenice 2.0""";"""Kovářov, rozcestí Klučenice 2.0""";;;yes;platform;;10689846358;B
+49.5571938;14.2302771;"""Kovářov, rozc. Klučenice 2.0""";"""Kovářov, rozcestí Klučenice 2.0""";;;yes;platform;;10689846361;A
+49.4430322;14.3726609;"""Milevsko, Mírové nám. u věžáku""";"""Milevsko, Mírové náměstí u věžáku""";21089;;yes;platform;;9674056875;
+49.4419433;14.3774778;"""Milevsko, žel. st.""";"""Milevsko, železniční stanice""";21090;;yes;platform;;9674056866;
+49.0480189;13.6647693;"""Zdíkov, rozc. Nové Hutě 1.0""";"""Zdíkov, rozcestí Nové Hutě 1.0""";23801;;yes;platform;;9276865795;
+49.0480243;13.6650617;"""Zdíkov, rozc. Nové Hutě 1.0""";"""Zdíkov, rozcestí Nové Hutě 1.0""";23801;;yes;platform;;9276865794;
+49.4864502;14.2539692;"""Kostelec n. Vlt., Přílepov, rozc. 1.5""";"""Kostelec nad Vltavou, Přílepov, rozcestí 1.5""";;;yes;platform;;10689846340;A
+49.3856299;14.6281576;"""Slapy, žel. zast.""";"""Slapy, železniční zastávka""";51325;;yes;platform;;9725081259;
+49.3857039;14.6282133;"""Slapy, žel. zast.""";"""Slapy, železniční zastávka""";51325;;yes;platform;;9725081260;
+49.3958546;14.6430344;"""Tábor, Horky, žel. zast.""";"""Tábor, Horky, železniční zastávka""";35321;;yes;platform;;269131823;
+49.3958950;14.6431841;"""Tábor, Horky, žel. zast.""";"""Tábor, Horky, železniční zastávka""";35321;;yes;platform;;269131824;
+49.2283710;14.7203221;"""Řípec, rozc. Dráchov 1.0""";"""Řípec, rozcestí Dráchov 1.0""";55554;;yes;platform;;9729271011;
+49.2278472;14.7206768;"""Řípec, rozc. Dráchov 1.0""";"""Řípec, rozcestí Dráchov 1.0""";55554;;yes;platform;;9729271010;
+49.2027873;14.7168589;"""Veselí n. Luž., Lužan""";"""Veselí nad Lužnicí, Lužan""";39221;;yes;platform;;9729270485;
+49.2030884;14.7170828;"""Veselí n. Luž., Lužan""";"""Veselí nad Lužnicí, Lužan""";39221;;yes;platform;;9729270484;
+49.1972871;14.7162727;"""Veselí n. Luž., Prefa""";"""Veselí nad Lužnicí, Prefa""";39223;;yes;platform;;9729270488;
+49.1973169;14.7160955;"""Veselí n. Luž., Prefa""";"""Veselí nad Lužnicí, Prefa""";39223;;yes;platform;;9729270489;
+49.1856216;14.6960262;"""Veselí n. Luž., V Podhájku""";"""Veselí nad Lužnicí, V Podhájku""";39228;;yes;platform;;9729270481;
+49.4172613;14.6627173;"""Tábor, Nový Ráj""";"""Tábor, Nový ráj""";35332;;yes;platform;;251694592;
+49.4152319;14.6601558;"""Tábor, Tržní nám.""";"""Tábor, Tržní náměstí""";57646;;yes;platform;;165983142;
+49.4266827;14.7132529;"""Tábor, Záluží, rozc. Hlinice""";"""Záluží, rozcestí Hlinice""";51353;;yes;platform;;3634343706;
+49.4267487;14.7131777;"""Tábor, Záluží, rozc. Hlinice""";"""Záluží, rozcestí Hlinice""";51353;;yes;platform;;10741509924;
+49.4484646;14.6755490;"""Tábor, Stoklasná Lhota""";Stoklasná Lhota;51355;;yes;platform;;10741509929;
+49.4230048;14.7088586;"""Tábor, Záluží, škola""";Záluží škola;51354;;yes;platform;;3634343705;
+49.4230937;14.7087457;"""Tábor, Záluží, škola""";Záluží škola;51354;;yes;platform;;10741509923;
+49.1898173;14.6945436;"""Veselí n. Luž., Chmelnice""";"""Veselí nad Lužnicí, Chmelnice""";39217;;yes;platform;;9729270479;
+49.1898319;14.6946240;"""Veselí n. Luž., Chmelnice""";"""Veselí nad Lužnicí, Chmelnice""";39217;;yes;platform;;9729270480;
+49.1834226;14.6975049;"""Veselí n. Luž., Jiráskova""";"""Veselí nad Lužnicí, Jiráskova""";39218;;yes;platform;;6363020774;
+49.1860784;14.7022867;"""Veselí n. Luž., Hamerská""";"""Veselí nad Lužnicí, Hamerská""";47711;;yes;platform;;9729270482;
+49.1861179;14.7021483;"""Veselí n. Luž., Hamerská""";"""Veselí nad Lužnicí, Hamerská""";47711;;yes;platform;;9729270483;
+49.1774934;14.7124297;"""Veselí n. Luž., pískovna""";"""Veselí nad Lužnicí, pískovna""";47712;;yes;platform;;1306122852;
+49.1774105;14.7124121;"""Veselí n. Luž., pískovna""";"""Veselí nad Lužnicí, pískovna""";47712;;yes;platform;;10741509918;
+49.1854390;14.7213469;"""Veselí n. Luž., Tyršova čtvrť rozc.""";"""Veselí nad Lužnicí, Tyršova čtvrť rozcestí""";39226;;yes;platform;;9729270780;
+49.1855248;14.7212562;"""Veselí n. Luž., Tyršova čtvrť rozc.""";"""Veselí nad Lužnicí, Tyršova čtvrť rozcestí""";39226;;yes;platform;;9729270781;
+49.0558222;14.0747130;"""Vitějovice, rozc. 1.0""";"""Vitějovice, rozcestí 1.0""";;;yes;platform;;7377606326;
+49.0556206;14.0743569;"""Vitějovice, rozc. 1.0""";"""Vitějovice, rozcestí 1.0""";;;yes;platform;;7377606325;
+49.3968548;14.7285590;"""Tábor, Kozí Hrádek rozc. 0.5""";"""Tábor, Kozí Hrádek rozcestí 0.5""";35349;;yes;platform;;674136772;
+49.3965609;14.7286075;"""Tábor, Kozí Hrádek rozc. 0.5""";"""Tábor, Kozí Hrádek rozcestí 0.5""";35349;;yes;platform;;9406108814;
