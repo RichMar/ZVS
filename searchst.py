@@ -345,6 +345,10 @@ if os.path.exists(csvfile):
 
     for x in zastavkykraj:
         stan = ""
+        lat = ""
+        lon = ""
+        ref = ""
+        oficialname = ""
         g = 0
         tisk = 1
         # print("iterace:" + str(iterace))
@@ -431,7 +435,7 @@ if os.path.exists(csvfile):
                     oficialname = zastavkykraj[ii[0]][4]
                     ref = zastavkykraj[ii[0]][2]
                     stan = zastavkykraj[ii[0]][5]
-                    n = tridit(lat, lon, 0.015, x, n, g, 2, data, stan, oficialname, ref)
+                    n = tridit(lat, lon, 0.025, x, n, g, 2, data, stan, oficialname, ref)
                     # dd = 0
                     # for xx in data:
                     #
