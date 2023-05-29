@@ -210,7 +210,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
                 # zapíše zastávky z oficiálího seznamu, které nejsou v OSM
                 # if pruchod == 1:
     minimum = min(vzdalenost)
-    if minimum > 0.025:
+    if minimum > limvzd:
         # chybejicisinglzast = [[] for i in range(4)]
         chybejicisinglzast = ['']*5
         chybejicisinglzast[0] = []
