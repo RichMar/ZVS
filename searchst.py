@@ -55,8 +55,8 @@ def get_keys(bod_od, bod_osm, porov, dstan):
             jm = bod_od[4]
         # name
         if i == 3 and not x == "":
-            if "Hvížďalka" in x:
-                print("Hvížďalka8")
+            if "Český Krumlov,,žel.st." in x:
+                print("Český Krumlov,,žel.st.")
 
             if (not x == bod_od[4] and porov < 0.11) or (not x == bod_od[5]):
                 problemovybodosm.append(bod_osm)
@@ -158,8 +158,8 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
             # if str(xx[9]) == "9729270869":
             #     print("Hvížďalka1")
             if vzd < limvzd:
-                if "Hvížďalka" in xx[3]:
-                    print("Hvížďalka3")
+                if "Český Krumlov,,žel.st." in xx[3] or "Český Krumlov, Železniční stanice" in xx[3]: # Český Krumlov, Železniční stanice
+                    print("Český Krumlov,,žel.st.")
                 # if str(xx[9]) == "9729270869":
                 #     print("Hvížďalka4")
                 ddd += 1
