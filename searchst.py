@@ -55,8 +55,8 @@ def get_keys(bod_od, bod_osm, porov, dstan):
             jm = bod_od[4]
         # name
         if i == 3 and not x == "":
-            if x == "Husinec":
-                print("Hosín")
+            if "Hvížďalka" in x:
+                print("Hvížďalka8")
 
             if (not x == bod_od[4] and porov < 0.11) or (not x == bod_od[5]):
                 problemovybodosm.append(bod_osm)
@@ -144,24 +144,24 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
     for xx in ddata:
         h += 1
         # if not xx == ['']:
-            # if xx[3] == "Hosín":
-                # print("Hosín")
-            # if xx[9] == 3394620128:
-            #     print("Hosín")
-            # if str(xx[9]) == "3394620128":
-            #     print("Hosín")
+            # if xx[3] == "Hvížďalka":
+            #     print("Hvížďalka7")
+            # if xx[9] == 9729270869:
+            #     print("Hvížďalka6")
+            # if str(xx[9]) == "972927086":
+            #     print("Hvížďalka5")
         if "@lat" not in str(xx) and not xx[0] == "":
             vzd = get_distance(float(dlat), float(dlon), float(xx[0]), float(xx[1]))
             vzdalenost.append(vzd)
-            # if xx[3] == "Hosín":
-            #     print("Hosín")
-            # if str(xx[9]) == "3394620128":
-            #     print("Hosín")
+            # if "Hvížďalka" in xx[3]:
+            #     print("Hvížďalka2")
+            # if str(xx[9]) == "9729270869":
+            #     print("Hvížďalka1")
             if vzd < limvzd:
-                if xx[3] == "Husinec":
-                    print("Husinec1")
-                if str(xx[9]) == "3394620128":
-                    print("Hosín2")
+                if "Hvížďalka" in xx[3]:
+                    print("Hvížďalka3")
+                # if str(xx[9]) == "9729270869":
+                #     print("Hvížďalka4")
                 ddd += 1
                 ddn += 1
                 # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
@@ -178,11 +178,14 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
                             similarity = s.ratio()
                             if similarity < 0.11:
                                 problemovazast.append(dx)
+                            else:
+                                radek = get_keys(dx, xx, float(similarity), dstan)
+                                josm.append(radek)
                         # print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
                         #   xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
-
-                    #     radek = get_keys(dx, xx, float(similarity), dstan)
-                    #     josm.append(radek)
+                        else:
+                            radek = get_keys(dx, xx, float(similarity), dstan)
+                            josm.append(radek)
                     # elif similarity < 0.11:
                     #      problemovazast.append(dx)
                     else:
