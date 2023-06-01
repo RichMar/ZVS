@@ -13,6 +13,7 @@ import numpy as np
 
 bodydoplnkey = []
 edittag = [[] for i in range(4)]
+autnadr = []
 def get_distance(lat_1, lng_1, lat_2, lng_2):  # vypocet vzdalenosti bodu
     lng_1, lat_1, lng_2, lat_2 = map(radians, [lng_1, lat_1, lng_2, lat_2])  # prevede uhly na radiany
     d_lat = lat_2 - lat_1
@@ -49,19 +50,23 @@ def get_keys(bod_od, bod_osm, porov, dstan):
             if not x == bod_od[4] and porov < 0.11:
                 # name
                 problemovybodosm.append(bod_osm)
+                posl = len(problemovybodosm)-1
+                problemovybodosm.insert(posl, "2")
             else:
                 jm = bod_od[4]
         elif i == 2 and x == "":
             jm = bod_od[4]
         # name
         if i == 3 and not x == "":
-            if "Český Krumlov,,žel.st." in x:
-                print("Český Krumlov,,žel.st.")
-            if "Český Krumlov, Železniční stanice" in x:
-                print("Český Krumlov, Železniční stanice")
+            # if "Český Krumlov,,žel.st." in x:
+            #     print("Český Krumlov,,žel.st.")
+            # if "Český Krumlov, Železniční stanice" in x:
+            #     print("Český Krumlov, Železniční stanice")
 
             if (not x == bod_od[4] and porov < 0.11) or (not x == bod_od[5]):
                 problemovybodosm.append(bod_osm)
+                posl = len(problemovybodosm) - 1
+                problemovybodosm[posl].append("3")
             elif porov > 0.11:
                 jm = bod_od[4]
             elif x == bod_od[5]:
@@ -76,6 +81,8 @@ def get_keys(bod_od, bod_osm, porov, dstan):
         if i == 4 and not x == "":
             if not x == bod_od[2]:
                 problemovybodosm.append(bod_osm)
+                posl = len(problemovybodosm) - 1
+                problemovybodosm[posl].append("4")
             else:
                 refe = ""
         elif i == 4 and x == "":
@@ -85,6 +92,8 @@ def get_keys(bod_od, bod_osm, porov, dstan):
         if i == 10 and not x == "":
             if not x == bod_od[5]:
                 problemovybodosm.append(bod_osm)
+                posl = len(problemovybodosm) - 1
+                problemovybodosm[posl].append("10")
             else:
                 # locref = bod_od[5]
                 locref = ""
@@ -143,76 +152,82 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
     # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id) 10)local_ref
     h = 0
     vzdalenost = []
-    for xx in ddata:
-        h += 1
-        # if not xx == ['']:
-            # if xx[3] == "Hvížďalka":
-            #     print("Hvížďalka7")
-            # if xx[9] == 9729270869:
-            #     print("Hvížďalka6")
-            # if str(xx[9]) == "6004769198":
-            #     print("Hvížďalka5")
-        if "@lat" not in str(xx) and not xx[0] == "":
-            vzd = get_distance(float(dlat), float(dlon), float(xx[0]), float(xx[1]))
-            vzdalenost.append(vzd)
-            # if "Český Krumlov,,žel.st." in xx[3]:
-            #     print("Hvížďalka2")
-            # if "Český Krumlov, Železniční stanice" in xx[3]:
-            #     print("Hvížďalka2")
-            if str(xx[9]) == "6004769198":
-                print("Český Krumlov, Železniční stanice2 - " + str(vzd))
-            if vzd < limvzd:
-                if "Český Krumlov,,žel.st." in xx[3] or "Český Krumlov, Železniční stanice" in xx[3]: # Český Krumlov, Železniční stanice
-                    print("Český Krumlov,,žel.st.")
+
+    if pocetz <= 4:
+        for xx in ddata:
+            h += 1
+            # if not xx == ['']:
+                # if xx[3] == "Hvížďalka":
+                #     print("Hvížďalka7")
+                # if xx[9] == 9729270869:
+                #     print("Hvížďalka6")
+                # if str(xx[9]) == "6004769198":
+                #     print("Hvížďalka5")
+            if "@lat" not in str(xx) and not xx[0] == "":
+                vzd = get_distance(float(dlat), float(dlon), float(xx[0]), float(xx[1]))
+                vzdalenost.append(vzd)
+                # if "Český Krumlov,,žel.st." in xx[3]:
+                #     print("Hvížďalka2")
+                # if "Český Krumlov, Železniční stanice" in xx[3]:
+                #     print("Hvížďalka2")
                 if str(xx[9]) == "6004769198":
-                    print("Český Krumlov, Železniční stanice2")
-                # if str(xx[9]) == "9729270869":
-                #     print("Hvížďalka4")
-                ddd += 1
-                ddn += 1
-                # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
-                # name 3 a official name 2
-                # if not xx[3] == "" or not xx[2] == "":
-                if not xx[2] == "" or not xx[3] == "":
-                    s = difflib.SequenceMatcher(None, xx[2], doficialname)
-                    similarity = s.ratio()
-                    if similarity < 0.11:
-                        s = difflib.SequenceMatcher(None, xx[3], doficialname)
+                    print("Český Krumlov, Železniční stanice2 - " + str(vzd))
+                if vzd < limvzd:
+                    if "Český Krumlov,,žel.st." in xx[3] or "Český Krumlov, Železniční stanice" in xx[3]: # Český Krumlov, Železniční stanice
+                        print("Český Krumlov,,žel.st.")
+                    if str(xx[9]) == "6004769198":
+                        print("Český Krumlov, Železniční stanice2")
+                    # if str(xx[9]) == "9729270869":
+                    #     print("Hvížďalka4")
+                    ddd += 1
+                    ddn += 1
+                    # porovná názvy zastávek  (0 neshodují se, 1 shodují se)
+                    # name 3 a official name 2
+                    # if not xx[3] == "" or not xx[2] == "":
+                    if not xx[2] == "" or not xx[3] == "":
+                        s = difflib.SequenceMatcher(None, xx[2], doficialname)
                         similarity = s.ratio()
                         if similarity < 0.11:
-                            s = difflib.SequenceMatcher(None, xx[3], dstan)
+                            s = difflib.SequenceMatcher(None, xx[3], doficialname)
                             similarity = s.ratio()
                             if similarity < 0.11:
-                                problemovazast.append(dx)
+                                s = difflib.SequenceMatcher(None, xx[3], dstan)
+                                similarity = s.ratio()
+                                if similarity < 0.11:
+                                    problemovazast.append(dx)
+                                    posl = len(problemovazast) - 1
+                                    problemovazast[posl].append("sim")
+                                else:
+                                    radek = get_keys(dx, xx, float(similarity), dstan)
+                                    josm.append(radek)
+                            # print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
+                            #   xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
                             else:
                                 radek = get_keys(dx, xx, float(similarity), dstan)
                                 josm.append(radek)
-                        # print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
-                        #   xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
+                        # elif similarity < 0.11:
+                        #      problemovazast.append(dx)
                         else:
+                            print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(
+                                xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
+                                  xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
                             radek = get_keys(dx, xx, float(similarity), dstan)
                             josm.append(radek)
-                    # elif similarity < 0.11:
-                    #      problemovazast.append(dx)
+
+                        #   print("kuku")
                     else:
-                        print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(
-                            xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
-                              xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
-                        radek = get_keys(dx, xx, float(similarity), dstan)
+                        # print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(
+                        #     xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
+                        #       xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
+                        radek = get_keys(dx, xx, 2, dstan)
                         josm.append(radek)
 
-                    #   print("kuku")
-                else:
-                    # print(str(ddn) + ": " + str(vzd) + "---: " + str(dlat) + "," + str(dlon) + " (" + str(
-                    #     xx[0]) + "," + str(xx[1]) + ")" + ": OSM name: " +
-                    #       xx[3] + "-----Official name: " + doficialname + " =" + str(similarity))
-                    radek = get_keys(dx, xx, 2, dstan)
-                    josm.append(radek)
-
-                if ddd > pocetz:
-                    # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak jedna zastavvky v OSM
-                    print(colored("dd: " + str(ddd) + ": " + str(xx[0]) + "," + str(xx[1]), "red"))
-                    problemovazast.append(dx)
+                    if ddd > pocetz:
+                        # v blízkosti jedne zastavky z ofiial seznamu se nachazi více jak jedna zastavvky v OSM
+                        print(colored("dd: " + str(ddd) + ": " + str(xx[0]) + "," + str(xx[1]), "red"))
+                        problemovazast.append(dx)
+                        posl = len(problemovazast) - 1
+                        problemovazast[posl].append("ddd")
 
 
             # else:
@@ -487,7 +502,7 @@ if os.path.exists(csvfile):
                     #
                     #                 chybejicisinglzast_list.append(chybejicisinglzast[:])
                     #                 g = 1
-            elif len(index_zast) > 2:
+            elif 2 < len(index_zast) <= 4:
                 if tisk == 1 and tiskg == 0:
                     print(colored(str(len(index_zast)) + " zastávky se stejným ref. Ref: " + str(ref), "green"))
                     tisk = 0
@@ -501,7 +516,9 @@ if os.path.exists(csvfile):
                         oficialname = zastavkykraj[ii[0]][4]
                         ref = zastavkykraj[ii[0]][2]
                         stan = zastavkykraj[ii[0]][5]
-                        n = tridit(lat, lon, 0.025, x, n, g, len(index_zast), data, stan, oficialname, ref)
+                        n = tridit(lat, lon, 0.015, x, n, g, len(index_zast), data, stan, oficialname, ref)
+            elif len(index_zast) > 4:
+                autnadr.append(x)
 # res_chybejicisinglzast_list = list(set(chybejicisinglzast_list))
 # kuku = removedup(chybejicisinglzast_list)
 # counts = Counter(row[0] for row in chybejicisinglzast_list)
@@ -514,11 +531,13 @@ bezdupl_list = deduplicate(chybejicisinglzast_list, 0)
 bezdupl_josm = deduplicate(josm, 1)
 bezdupl_problemovazast = deduplicate(problemovazast, 0)
 bezdupl_problemovybodosm = deduplicate(problemovybodosm, 0)
-
+bezdupl_autnadr =  deduplicate(autnadr, 0)
 print("Total items in original chybejicisinglzast_list :", len(chybejicisinglzast_list))
 print("Total items after deduplication bezdupl_list:", len(bezdupl_list))
 print("Total items in original josm :", len(josm))
 print("Total items after deduplication bezdupl_josm:", len(bezdupl_josm))
+print("Total items in original autnadr :", len(autnadr))
+print("Total items after deduplication bezdupl_autnadr:", len(bezdupl_autnadr))
 print("Ahoj")
 tisk_csv(bezdupl_list, "bezdupl_list", ["lat", "lon", "ref:CIS_JR", "official_name", "local_ref"])
 tisk_csv(bezdupl_josm, "bezdupl_josm", ["elemnt", "id", "official_name", "ref:CIS_JR", "local_ref", "lat", "lon"])
@@ -526,6 +545,7 @@ tisk_csv(bezdupl_problemovazast, "problemovazast", ["lat", "lon", "ref", "okres"
 # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id) 10)local_ref
 tisk_csv(bezdupl_problemovybodosm, "problemovybodosm", ["lat", "lon", "ref", "official_name", "name", "ref:CIS_JR",
                                                         "stanoviste", "ref", "bus", "public_transport", "count", "id"])
+tisk_csv(bezdupl_autnadr, "bezdupl_autnadr", ["lat", "lon", "ref:CIS_JR", "official_name", "local_ref"])
 print("konec")
     # for x in csv_reader:
 #     if "lat" not in x:
