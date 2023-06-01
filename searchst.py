@@ -62,12 +62,12 @@ def get_keys(bod_od, bod_osm, porov, dstan):
             #     print("Český Krumlov,,žel.st.")
             # if "Český Krumlov, Železniční stanice" in x:
             #     print("Český Krumlov, Železniční stanice")
-
-            if (not x == bod_od[4] and porov < 0.11) or (not x == bod_od[5]):
-                problemovybodosm.append(bod_osm)
-                posl = len(problemovybodosm) - 1
-                problemovybodosm[posl].append("3")
-            elif porov > 0.11:
+            # bod_od: 0)lat	1)lon	2)ref	3)okres	4)name	5)stanoviste	6)typ
+            # if (not x == bod_od[4] and porov < 0.11) or (not x == bod_od[5]):
+            #     problemovybodosm.append(bod_osm)
+            #     posl = len(problemovybodosm) - 1
+            #     problemovybodosm[posl].append("3")
+            if porov > 0.11:
                 jm = bod_od[4]
             elif x == bod_od[5]:
                 jm = bod_od[4]
@@ -194,9 +194,9 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
                                 s = difflib.SequenceMatcher(None, xx[3], dstan)
                                 similarity = s.ratio()
                                 if similarity < 0.11:
-                                    problemovazast.append(dx)
-                                    posl = len(problemovazast) - 1
-                                    problemovazast[posl].append("sim")
+                                    problemovybodosm.append(dx)
+                                    posl = len(problemovybodosm) - 1
+                                    problemovybodosm[posl].append("sim")
                                 else:
                                     radek = get_keys(dx, xx, float(similarity), dstan)
                                     josm.append(radek)
@@ -227,7 +227,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
                         print(colored("dd: " + str(ddd) + ": " + str(xx[0]) + "," + str(xx[1]), "red"))
                         problemovazast.append(dx)
                         posl = len(problemovazast) - 1
-                        problemovazast[posl].append("ddd")
+                        problemovazast[posl].append("ddd = " + str(ddd) + ", pocet zast: " + str(pocetz))
 
 
             # else:
