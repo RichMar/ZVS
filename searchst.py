@@ -57,6 +57,8 @@ def get_keys(bod_od, bod_osm, porov, dstan):
         if i == 3 and not x == "":
             if "Český Krumlov,,žel.st." in x:
                 print("Český Krumlov,,žel.st.")
+            if "Český Krumlov, Železniční stanice" in x:
+                print("Český Krumlov, Železniční stanice")
 
             if (not x == bod_od[4] and porov < 0.11) or (not x == bod_od[5]):
                 problemovybodosm.append(bod_osm)
@@ -148,18 +150,22 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
             #     print("Hvížďalka7")
             # if xx[9] == 9729270869:
             #     print("Hvížďalka6")
-            # if str(xx[9]) == "972927086":
+            # if str(xx[9]) == "6004769198":
             #     print("Hvížďalka5")
         if "@lat" not in str(xx) and not xx[0] == "":
             vzd = get_distance(float(dlat), float(dlon), float(xx[0]), float(xx[1]))
             vzdalenost.append(vzd)
-            # if "Hvížďalka" in xx[3]:
+            # if "Český Krumlov,,žel.st." in xx[3]:
             #     print("Hvížďalka2")
-            # if str(xx[9]) == "9729270869":
-            #     print("Hvížďalka1")
+            # if "Český Krumlov, Železniční stanice" in xx[3]:
+            #     print("Hvížďalka2")
+            if str(xx[9]) == "6004769198":
+                print("Český Krumlov, Železniční stanice2 - " + str(vzd))
             if vzd < limvzd:
                 if "Český Krumlov,,žel.st." in xx[3] or "Český Krumlov, Železniční stanice" in xx[3]: # Český Krumlov, Železniční stanice
                     print("Český Krumlov,,žel.st.")
+                if str(xx[9]) == "6004769198":
+                    print("Český Krumlov, Železniční stanice2")
                 # if str(xx[9]) == "9729270869":
                 #     print("Hvížďalka4")
                 ddd += 1
@@ -495,7 +501,7 @@ if os.path.exists(csvfile):
                         oficialname = zastavkykraj[ii[0]][4]
                         ref = zastavkykraj[ii[0]][2]
                         stan = zastavkykraj[ii[0]][5]
-                        n = tridit(lat, lon, 0.005, x, n, g, len(index_zast), data, stan, oficialname, ref)
+                        n = tridit(lat, lon, 0.025, x, n, g, len(index_zast), data, stan, oficialname, ref)
 # res_chybejicisinglzast_list = list(set(chybejicisinglzast_list))
 # kuku = removedup(chybejicisinglzast_list)
 # counts = Counter(row[0] for row in chybejicisinglzast_list)
