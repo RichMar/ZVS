@@ -73,6 +73,8 @@ def get_keys(bod_od, bod_osm, porov, dstan):
                 jm = bod_od[4]
         elif i == 3 and x == "" and bod_od[5] == "":
             jm = bod_od[4]
+
+
         # elif i == 3 and x == "" and not bod_od[5] == "":
         #     # zapise do name stannoviste
         #     locref = bod_od[5]
@@ -173,10 +175,10 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
                 if str(xx[9]) == "6004769198":
                     print("Český Krumlov, Železniční stanice2 - " + str(vzd))
                 if vzd < limvzd:
-                    if "Český Krumlov,,žel.st." in xx[3] or "Český Krumlov, Železniční stanice" in xx[3]: # Český Krumlov, Železniční stanice
-                        print("Český Krumlov,,žel.st.")
-                    if str(xx[9]) == "6004769198":
-                        print("Český Krumlov, Železniční stanice2")
+                    # if "Český Krumlov,,žel.st." in xx[3] or "Český Krumlov, Železniční stanice" in xx[3]: # Český Krumlov, Železniční stanice
+                    #     print("Český Krumlov,,žel.st.")
+                    # if str(xx[9]) == "6004769198":
+                    #     print("Český Krumlov, Železniční stanice2")
                     # if str(xx[9]) == "9729270869":
                     #     print("Hvížďalka4")
                     ddd += 1
@@ -543,8 +545,8 @@ tisk_csv(bezdupl_list, "bezdupl_list", ["lat", "lon", "ref:CIS_JR", "official_na
 tisk_csv(bezdupl_josm, "bezdupl_josm", ["elemnt", "id", "official_name", "ref:CIS_JR", "local_ref", "lat", "lon"])
 tisk_csv(bezdupl_problemovazast, "problemovazast", ["lat", "lon", "ref", "okres", "name", "stanoviste", "typ"])
 # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id) 10)local_ref
-tisk_csv(bezdupl_problemovybodosm, "problemovybodosm", ["lat", "lon", "ref", "official_name", "name", "ref:CIS_JR",
-                                                        "stanoviste", "ref", "bus", "public_transport", "count", "id"])
+tisk_csv(bezdupl_problemovybodosm, "problemovybodosm", ["lat", "lon", "official_name", "name","ref:CIS_JR","ref",
+                                                        "bus", "public_transport", "count", "id", "local_ref"])
 tisk_csv(bezdupl_autnadr, "bezdupl_autnadr", ["lat", "lon", "ref:CIS_JR", "official_name", "local_ref"])
 print("konec")
     # for x in csv_reader:
