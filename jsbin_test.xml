@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Random untested script">
+  <node id="5194568304" lat="49.1390569" lon="15.0190877" version="4" timestamp="2021-10-15T08:33:20Z" changeset="112532281" uid="665336" user="Minimalis" action="modify" visible="true">
+    <tag k="bus" v="yes"/>
+    <tag k="highway" v="bus_stop"/>
+    <tag k="name" v="sídliště Vajgar-trojstředisko"/>
+    <tag k="official_name" v="Jindřichův Hradec,,sídl.Vajgar-trojstředisko"/>
+    <tag k="public_transport" v="platform"/>
+    <tag k="ref:CIS_JR" v="13432"/>
+  </node>
+  <node id="5194613966" lat="49.1392113" lon="15.0201136" version="4" timestamp="2021-10-15T08:33:20Z" changeset="112532281" uid="665336" user="Minimalis" action="modify" visible="true">
+    <tag k="bus" v="yes"/>
+    <tag k="highway" v="bus_stop"/>
+    <tag k="name" v="sídliště Vajgar-trojstředisko"/>
+    <tag k="official_name" v="Jindřichův Hradec,,sídl.Vajgar-trojstředisko"/>
+    <tag k="public_transport" v="platform"/>
+    <tag k="ref:CIS_JR" v="13432"/>
+  </node>
+  <node id="5197761683" lat="49.1443361" lon="15.0251008" version="4" timestamp="2022-10-07T08:55:53Z" changeset="127139743" uid="13864" user="Martin Poljak" action="modify" visible="true">
+    <tag k="bus" v="yes"/>
+    <tag k="highway" v="bus_stop"/>
+    <tag k="name" v="U Cihelny"/>
+    <tag k="official_name" v="Jindřichův Hradec,,U cihelny"/>
+    <tag k="public_transport" v="platform"/>
+    <tag k="ref:CIS_JR" v="64284"/>
+    <tag k="shelter" v="no"/>
+  </node>
+  <node id="9174048194" lat="49.1447478" lon="15.0276842" version="6" timestamp="2022-10-07T08:56:27Z" changeset="127139779" uid="13864" user="Martin Poljak" action="modify" visible="true">
+    <tag k="bench" v="no"/>
+    <tag k="bin" v="no"/>
+    <tag k="bus" v="yes"/>
+    <tag k="highway" v="bus_stop"/>
+    <tag k="lit" v="no"/>
+    <tag k="name" v="U Cihelny"/>
+    <tag k="official_name" v="Jindřichův Hradec,,U cihelny"/>
+    <tag k="public_transport" v="platform"/>
+    <tag k="ref:CIS_JR" v="64284"/>
+    <tag k="shelter" v="no"/>
+    <tag k="tactile_paving" v="no"/>
+  </node>
+  <node id="3248441992" lat="49.1383683" lon="15.0081563" version="3" timestamp="2021-10-15T08:33:20Z" changeset="112532281" uid="665336" user="Minimalis" action="modify" visible="true">
+    <tag k="bus" v="yes"/>
+    <tag k="highway" v="bus_stop"/>
+    <tag k="name" v="Zborovská"/>
+    <tag k="official_name" v="Jindřichův Hradec,,Zborovská"/>
+    <tag k="public_transport" v="platform"/>
+    <tag k="ref:CIS_JR" v="13440"/>
+  </node>
+  <node id="9174048345" lat="49.1382172" lon="15.0082184" version="1" timestamp="2021-10-15T08:33:20Z" changeset="112532281" uid="665336" user="Minimalis" action="modify" visible="true">
+    <tag k="bus" v="yes"/>
+    <tag k="highway" v="bus_stop"/>
+    <tag k="name" v="Zborovská"/>
+    <tag k="official_name" v="Jindřichův Hradec,,Zborovská"/>
+    <tag k="public_transport" v="platform"/>
+    <tag k="ref:CIS_JR" v="13440"/>
+  </node>
+  <node id="10570506360" lat="49.1670729" lon="15.0158764" version="1" timestamp="2023-01-20T13:17:14Z" changeset="131508120" uid="2061236" user="Thartek" action="modify" visible="true">
+    <tag k="highway" v="bus_stop"/>
+    <tag k="name" v="Jindřichův Hradec, Dolní Skrýchov, točna"/>
+    <tag k="official_name" v="Jindřichův Hradec,Dolní Skrýchov,točna"/>
+    <tag k="ref:CIS_JR" v="64278"/>
+  </node>
+  <node id="9174041600" lat="49.1358261" lon="15.0446597" version="1" timestamp="2021-10-15T08:33:20Z" changeset="112532281" uid="665336" user="Minimalis" action="modify" visible="true">
+    <tag k="bus" v="yes"/>
+    <tag k="highway" v="bus_stop"/>
+    <tag k="name" v="Otín, točna"/>
+    <tag k="official_name" v="Jindřichův Hradec,Otín,točna"/>
+    <tag k="public_transport" v="platform"/>
+    <tag k="ref:CIS_JR" v="64326"/>
+  </node>
+  <node id="6224789018" lat="49.1407885" lon="15.0393211" version="3" timestamp="2021-10-15T08:33:20Z" changeset="112532281" uid="665336" user="Minimalis" action="modify" visible="true">
+    <tag k="bus" v="yes"/>
+    <tag k="highway" v="bus_stop"/>
+    <tag k="name" v="Otín, vilky"/>
+    <tag k="network" v="MHD"/>
+    <tag k="official_name" v="Jindřichův Hradec,Otín,vilky"/>
+    <tag k="public_transport" v="platform"/>
+    <tag k="ref:CIS_JR" v="64289"/>
+  </node>
+  <node id="8809000587" lat="49.1404706" lon="15.0401585" version="2" timestamp="2021-10-15T08:33:20Z" changeset="112532281" uid="665336" user="Minimalis" action="modify" visible="true">
+    <tag k="bus" v="yes"/>
+    <tag k="highway" v="bus_stop"/>
+    <tag k="name" v="Otín, vilky"/>
+    <tag k="network" v="MHD"/>
+    <tag k="official_name" v="Jindřichův Hradec,Otín,vilky"/>
+    <tag k="public_transport" v="platform"/>
+    <tag k="ref:CIS_JR" v="64289"/>
+  </node>
+</osm>
