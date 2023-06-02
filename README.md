@@ -20,3 +20,7 @@ místní lokality.
 
 Následně se porovnávají sobory zastávek od JČK a z OSM. Zde se hledají zastávky, které jsou blíže než 25 metrů.
 Pokud má zastávka z OSM vyplněný klíč name či officeial_name porovnává se s oficiálními názvy. Použil jsem metodu difflib s třídou SequenceMatcher. Tato metoda porovnává dva řetězce. Pokud se shodují vrátí hodnotu 1 při úplné neshodě vrátí hodnotu 0. Pokud porovnání názvů vyjde menší než 0,11 zastávka se uloží do souboru problemovybodosm.csv.
+
+Zastávky, které jsou v OSM jsou brané jako správné, minimálně jejich polohy. Pokud se od dat JČK nějakým způsobem liší, je třeba polohu zkontrolovat v reálu a poté polohu upravit ručně.
+
+
