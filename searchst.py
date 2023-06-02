@@ -547,7 +547,7 @@ tisk_csv(bezdupl_problemovazast, "problemovazast", ["lat", "lon", "ref", "okres"
 # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id) 10)local_ref
 tisk_csv(bezdupl_problemovybodosm, "problemovybodosm", ["lat", "lon", "official_name", "name","ref:CIS_JR","ref",
                                                         "bus", "public_transport", "count", "id", "local_ref"])
-tisk_csv(bezdupl_autnadr, "bezdupl_autnadr", ["lat", "lon", "ref:CIS_JR", "official_name", "local_ref"])
+tisk_csv(bezdupl_autnadr, "bezdupl_autnadr", ["lat", "lon", "ref:CIS_JR", "district", "official_name", "local_ref", "typ"])
 print("konec")
     # for x in csv_reader:
 #     if "lat" not in x:
