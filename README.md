@@ -19,8 +19,9 @@ nástupišť v reálu je někdy jiné než podle dodaných dat. Nádraží bude 
 místní lokality.
 
 Následně se porovnávají sobory zastávek od JČK a z OSM. Zde se hledají zastávky, které jsou blíže než 25 metrů.
-Pokud má zastávka z OSM vyplněný klíč name či officeial_name porovnává se s oficiálními názvy. Použil jsem metodu difflib s třídou SequenceMatcher. Tato metoda porovnává dva řetězce. Pokud se shodují vrátí hodnotu 1 při úplné neshodě vrátí hodnotu 0. Pokud porovnání názvů vyjde menší než 0,11 zastávka se uloží do souboru problemovybodosm.csv.
+Pokud má zastávka z OSM vyplněný klíč name či officeial_name porovnává se s oficiálními názvy. Použil jsem metodu difflib s třídou SequenceMatcher. Tato metoda porovnává dva řetězce. Pokud se shodují vrátí hodnotu 1 při úplné neshodě vrátí hodnotu 0. Pokud porovnání názvů vyjde menší, než 0,11 zastávka se uloží do souboru problemovybodosm.csv.
 
-Zastávky, které jsou v OSM jsou brané jako správné, minimálně jejich polohy. Pokud se od dat JČK nějakým způsobem liší, je třeba polohu zkontrolovat v reálu a poté polohu upravit ručně.
-
-
+Zastávky v OSM jsou branné jako polohově správné. Pokud se od dat JČK nějakým způsobem významně liší, je třeba polohu zkontrolovat v reálu a poté polohu upravit ručně.
+Do souboru bezdupl_josm.csv se ukládají hodnoty klíčů official_name a ref:CIS_JR, local_ref zastávek v OSM, které je potřeba doplnit. Pokud zastávka ty hodnoty v OSM obsahuje a shodují se s těmi, které jsou od JČK. Hodnoty zůstávají prázdné. Tento soubor může být následně použit pro aktualizaci klíčů zastávek pomocí nástroje [jsbin](https://community.openstreetmap.org/t/editing-osm-tags-poi-data-in-a-spreadsheet/96843).
+Soubor obsahuje tyto prvky: element, id, official_name, ref:CIS_JR, local_ref a souřadnice.
+Tento nástroj vygeneruje soubor xml, který lze naimportovat do JOSM.
