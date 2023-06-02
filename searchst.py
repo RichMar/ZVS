@@ -172,8 +172,8 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
                 #     print("Hvížďalka2")
                 # if "Český Krumlov, Železniční stanice" in xx[3]:
                 #     print("Hvížďalka2")
-                if str(xx[9]) == "6004769198":
-                    print("Český Krumlov, Železniční stanice2 - " + str(vzd))
+                # if str(xx[9]) == "6004769198":
+                #     print("Český Krumlov, Železniční stanice2 - " + str(vzd))
                 if vzd < limvzd:
                     # if "Český Krumlov,,žel.st." in xx[3] or "Český Krumlov, Železniční stanice" in xx[3]: # Český Krumlov, Železniční stanice
                     #     print("Český Krumlov,,žel.st.")
@@ -196,9 +196,9 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
                                 s = difflib.SequenceMatcher(None, xx[3], dstan)
                                 similarity = s.ratio()
                                 if similarity < 0.11:
-                                    problemovybodosm.append(dx)
-                                    posl = len(problemovybodosm) - 1
-                                    problemovybodosm[posl].append("sim")
+                                    problemovazast.append(dx)
+                                    posl = len(problemovazast) - 1
+                                    problemovazast[posl].append("sim")
                                 else:
                                     radek = get_keys(dx, xx, float(similarity), dstan)
                                     josm.append(radek)
