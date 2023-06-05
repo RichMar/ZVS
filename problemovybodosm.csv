@@ -30,12 +30,8 @@ lat;lon;official_name;name;ref:CIS_JR;ref;bus;public_transport;count;id;local_re
 49.5039100;14.6164260;;"""Borotín, škola""";;;yes;platform;;10692396255;2;10;10;10;10
 49.1167832;14.7258501;;Frahelž;;;yes;platform;;5770680179;1;10;10;10;10
 49.1168900;14.7260017;;Frahelž;;;yes;platform;;5770680180;2;10;10;10;10
-49.0808498;15.4287449;;"""Dačice, sídliště""";5339;;yes;platform;;9524487784;;4;4
-49.0810378;15.4283074;;"""Dačice, sídliště""";5339;;yes;platform;;4371584096;;4;4
 49.0799753;15.4325781;"""Dačice, Havlíčkovo nám.""";"""Dačice, Havlíčkovo náměstí""";5333;;yes;platform;;2331101735;1;10
 49.0815486;15.4331738;;"""Dačice, Komenského""";49521;;yes;platform;;9524487753;1;10
-49.0823233;15.4327735;;"""Dačice, ZOU""";5342;;yes;platform;;8047999565;;4;4;4;4
-49.0822697;15.4326824;;"""Dačice, ZOU""";5342;;yes;platform;;9524487754;;4;4;4;4
 49.5060200;14.6129240;;Borotín;;;yes;platform;;3607940245;1;10;10;10;10
 49.5059390;14.6128930;;Borotín;;;yes;platform;;10690713516;2;10;10;10;10
 49.4897575;14.2412777;"""Kostelec n. Vlt., Sobědraž, rozc. s. 19""";"""Kostelec nad Vltavou, Sobědraž, rozcestí s. 19""";;;yes;platform;;10689846341;A;10;10;10
@@ -88,8 +84,6 @@ lat;lon;official_name;name;ref:CIS_JR;ref;bus;public_transport;count;id;local_re
 49.4293820;14.7190320;"""Tábor, Hlinice""";Hlinice;;;yes;platform;;824091955;2;10;10
 49.4232600;14.7035260;"""Tábor, Záluží""";Záluží;;;yes;platform;;3634343703;1;10;10;10;10
 49.4231530;14.7036910;"""Tábor, Záluží""";Záluží;;;yes;platform;;3634343704;2;10;10;10;10
-49.5652050;14.8242590;;Šebířov;;;yes;platform;;60283916;1;10;10;10;10
-49.5650412;14.8241608;;Šebířov;;;yes;platform;;10690713567;2;10;10;10;10
 49.5772780;14.8302140;;"""Šebířov, Skrýšov""";;;yes;platform;;281562908;1;10;10;10;10
 49.5772400;14.8303120;;"""Šebířov, Skrýšov""";;;yes;platform;;10690713577;2;10;10;10;10
 49.5510980;14.8156810;;"""Mladá Vožice, Noskov, Bor""";;;yes;platform;;10690713555;2;10;10;10;10
@@ -220,7 +214,6 @@ lat;lon;official_name;name;ref:CIS_JR;ref;bus;public_transport;count;id;local_re
 49.5314140;14.2570133;;"""Kovářov, Radvánov""";;;yes;platform;;10689846351;A;10;10
 49.4529038;14.3599396;;"""Milevsko, škola I""";;;yes;platform;;10689846338;A;10;10;10;10
 49.4529114;14.3617506;;"""Milevsko, poliklinika""";;;yes;platform;;10689846336;A;10
-49.4463031;14.3644821;;"""Milevsko, U Zámečku""";66834;;yes;platform;;9674056877;;4
 49.4566269;14.3628788;;"""Milevsko, Petrovická""";;;yes;platform;;10689846337;A;10
 49.4864502;14.2539692;"""Kostelec n. Vlt., Přílepov, rozc. 1.5""";"""Kostelec nad Vltavou, Přílepov, rozcestí 1.5""";;;yes;platform;;10689846340;A;10;10
 49.4755211;14.3304281;;"""Milevsko, Něžovice, Jenišovice""";;;yes;platform;;3931905870;B;10;10;10;10
