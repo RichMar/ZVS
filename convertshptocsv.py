@@ -49,9 +49,9 @@ csvfile = open('zastavky-JCK.csv', 'w')
 #UTF-8, windows-1250,ISO 8859-2, CP852
 csvfile_vlak = open('zastavky-JCK-vlak.csv', 'w', encoding="utf8")
 csvfile_bus = open('zastavky-JCK-bus.csv', 'w', encoding="utf8")
-csvfile.write("lat;lon;ref;okres;name;stanoviste;typ" + "\n")
-csvfile_vlak.write("lat;lon;ref;okres;name;stanoviste;typ" + "\n")
-csvfile_bus.write("lat;lon;ref;okres;name;stanoviste;typ" + "\n")
+csvfile.write("lat;lon;ref;okres;name;stanoviste;typ;obsluhovano" + "\n")
+csvfile_vlak.write("lat;lon;ref;okres;name;stanoviste;typ;obsluhovano" + "\n")
+csvfile_bus.write("lat;lon;ref;okres;name;stanoviste;typ;obsluhovano" + "\n")
 aa = 0
 
 for feature in layer:
@@ -67,16 +67,17 @@ for feature in layer:
     okres = feature.GetField("OKRES")
     poplong = feature.GetField("POPIS_LONG")
     stan = feature.GetField("STANOVISTE")
+    obsluh = feature.GetField("OBSLUHOVAN")
     if not stan:
         stan = ""
     typ = feature.GetField("TYP")
     print(geom.Centroid().ExportToWkt() + str(okres) + " " + str(poplong) + " " + str(stan))
-    csvfile.write(lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + str(stan) + ";" + typ + "\n")
-    if typ == "bus":
-        csvfile_bus.write(lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + str(stan) + ";" + typ + "\n")
-    elif typ == "vlak":
+    csvfile.write(lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + str(stan) + ";" + typ + ";" + str(obsluh) + "\n")
+    if typ == "bus" and obsluh == 1:
+        csvfile_bus.write(lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + str(stan) + ";" + typ + ";" + str(obsluh) + "\n")
+    elif typ == "vlak" and obsluh == 1:
         csvfile_vlak.write(
-            lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + str(stan) + ";" + typ + "\n")
+            lat + ";" + lon + ";" + ref + ";" + okres + ";" + poplong + ";" + str(stan) + ";" + typ + ";" + str(obsluh) + "\n")
     aa += 1
 print("Konec - počet řádků: " + str(aa))
 csvfile.close()
