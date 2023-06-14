@@ -36,6 +36,8 @@ def get_keys(bod_od, bod_osm, porov, dstan):
     jm = ""
     refe = ""
     locref = ""
+    pubtrans = ""
+    bus = ""
     for x in bod_osm[2:]:
         # if "Hosín" in x:
         #     print("Hosín")
@@ -79,7 +81,7 @@ def get_keys(bod_od, bod_osm, porov, dstan):
         #     # zapise do name stannoviste
         #     locref = bod_od[5]
 
-        # ref
+        # ref:CIS_JR
         if i == 4 and not x == "":
             if not x == bod_od[2]:
                 problemovybodosm.append(bod_osm)
@@ -89,6 +91,14 @@ def get_keys(bod_od, bod_osm, porov, dstan):
                 refe = ""
         elif i == 4 and x == "":
             refe = bod_od[2]
+
+        # bus
+        if i == 6 and x == "":
+            bus = "yes"
+
+        # public_transport
+        if i == 7 and x == "":
+            pubtrans = "platform"
 
         # stanoviste local_ref
         if i == 10 and not x == "":
@@ -110,7 +120,7 @@ def get_keys(bod_od, bod_osm, porov, dstan):
         # edittag[2] = jm
         # edittag[3] = refe
     # edittag = [[] for i in range(4)]
-    edittag = ['']*7
+    edittag = ['']*9
     edittag[0] = "node"
     # edittag[1].append(bod_osm[9])
     edittag[1] = bod_osm[9]
@@ -119,8 +129,10 @@ def get_keys(bod_od, bod_osm, porov, dstan):
     # edittag[3].append(refe)
     edittag[3] = refe
     edittag[4] = locref
-    edittag[5] = bod_osm[0]
-    edittag[6] = bod_osm[1]
+    edittag[5] = bus
+    edittag[6] = pubtrans
+    edittag[7] = bod_osm[0]
+    edittag[8] = bod_osm[1]
 
     return edittag
 
@@ -542,7 +554,7 @@ print("Total items in original autnadr :", len(autnadr))
 print("Total items after deduplication bezdupl_autnadr:", len(bezdupl_autnadr))
 print("Ahoj")
 tisk_csv(bezdupl_list, "bezdupl_list", ["lat", "lon", "ref:CIS_JR", "official_name", "local_ref"])
-tisk_csv(bezdupl_josm, "bezdupl_josm", ["elemnt", "id", "official_name", "ref:CIS_JR", "local_ref", "lat", "lon"])
+tisk_csv(bezdupl_josm, "bezdupl_josm", ["elemnt", "id", "official_name", "ref:CIS_JR", "local_ref", "bus", "public_transport", "lat", "lon"])
 tisk_csv(bezdupl_problemovazast, "problemovazast", ["lat", "lon", "ref", "okres", "name", "stanoviste", "typ"])
 # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id) 10)local_ref
 tisk_csv(bezdupl_problemovybodosm, "problemovybodosm", ["lat", "lon", "official_name", "name","ref:CIS_JR","ref",
