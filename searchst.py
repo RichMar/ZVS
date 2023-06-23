@@ -554,7 +554,7 @@ print("Total items in original autnadr :", len(autnadr))
 print("Total items after deduplication bezdupl_autnadr:", len(bezdupl_autnadr))
 print("Ahoj")
 tisk_csv(bezdupl_list, "bezdupl_list", ["lat", "lon", "ref:CIS_JR", "official_name", "local_ref"])
-tisk_csv(bezdupl_josm, "bezdupl_josm", ["elemnt", "id", "official_name", "ref:CIS_JR", "local_ref", "bus", "public_transport", "lat", "lon"])
+tisk_csv(bezdupl_josm, "bezdupl_josm", ["element", "id", "official_name", "ref:CIS_JR", "local_ref", "bus", "public_transport", "lat", "lon"])
 tisk_csv(bezdupl_problemovazast, "problemovazast", ["lat", "lon", "ref", "okres", "name", "stanoviste", "typ"])
 # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id) 10)local_ref
 tisk_csv(bezdupl_problemovybodosm, "problemovybodosm", ["lat", "lon", "official_name", "name","ref:CIS_JR","ref",
