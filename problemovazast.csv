@@ -1,0 +1,35 @@
+lat;lon;ref;okres;name;stanoviste;typ
+49.4517850230368;14.6405126274709;58361;TA;Nasavrky;;bus;1;ddd = 2, pocet zast: 1
+49.2556942301383;13.9120933418424;33276;ST;Strakonice,,U Dudáka;;bus;1;ddd = 2, pocet zast: 1
+49.4159278350766;14.6433472725697;64938;TA;Tábor,Klokoty,Klášter;;bus;1;ddd = 2, pocet zast: 1
+49.3737842427225;13.9416812231179;31202;ST;Sedlice,,škola;;bus;1;ddd = 3, pocet zast: 2;ddd = 4, pocet zast: 2;ddd = 3, pocet zast: 2;ddd = 4, pocet zast: 2
+49.3738579315351;13.9420538478564;31202;ST;Sedlice,,škola;;bus;1;ddd = 3, pocet zast: 2;ddd = 4, pocet zast: 2;ddd = 3, pocet zast: 2;ddd = 4, pocet zast: 2
+49.1844432731865;14.8511295652713;13981;JH;Kardašova Řečice,,nám.;;bus;1;ddd = 2, pocet zast: 1
+48.8246927536279;14.5118788307515;34184;CB;Svatý Jan n.Malší;;bus;1;ddd = 2, pocet zast: 1
+48.9330745787901;14.6189568460072;17668;CB;Ledenice,,aut.st.;;bus;1;ddd = 2, pocet zast: 1
+49.0123296172299;15.4524097812205;32889;JH;Staré Hobzí;;bus;1;ddd = 3, pocet zast: 2;ddd = 3, pocet zast: 2
+49.317652130092;13.804307463204;33629;ST;Střelské Hoštice,Sedlo;;bus;1;ddd = 2, pocet zast: 1
+49.4943482601231;14.6810783183702;11882;TA;Chotoviny,Sedléčko;;bus;1;ddd = 2, pocet zast: 1
+49.5722986128001;14.7912502437473;34673;TA;Šebířov,Zářičí;;bus;1;ddd = 2, pocet zast: 1
+49.5986922578559;14.7510032592895;34671;TA;Šebířov,Vrcholtovice;;bus;1;ddd = 2, pocet zast: 1
+49.4446197022371;14.7027910797156;35347;TA;Tábor,Hlinice,rozc.2.0;;bus;1;ddd = 2, pocet zast: 1
+49.3448008928766;14.7168458875211;26755;TA;Planá n.Luž.,Strkov;;bus;1;ddd = 3, pocet zast: 2;ddd = 3, pocet zast: 2
+49.3449339789857;14.7168288013331;26755;TA;Planá n.Luž.,Strkov;;bus;1;ddd = 3, pocet zast: 2;ddd = 3, pocet zast: 2
+49.0187090495677;14.0051485389928;28051;PT;Prachatice,,Vodňanská;;bus;1;ddd = 2, pocet zast: 1
+49.0706762144069;14.0072211317069;3430;PT;Budkov;;bus;1;ddd = 2, pocet zast: 1
+49.4340912732164;14.6909700213032;51331;TA;Tábor,Čekanice,točna;;bus;1;ddd = 2, pocet zast: 1
+49.3749631130153;14.706845538971;54607;TA;Sezimovo Ústí,,II Průmyslová;;bus;1;ddd = 2, pocet zast: 1
+48.9945133475148;14.1523168523069;18005;PT;Lhenice;4;bus;1;sim;sim;sim;sim
+48.9945400538392;14.1523652842804;18005;PT;Lhenice;3;bus;1;sim;sim;sim;sim
+48.9942166154351;14.1527379831445;18005;PT;Lhenice;1;bus;1;sim;sim;sim;sim
+48.9942393481845;14.1527909937419;18005;PT;Lhenice;2;bus;1;sim;sim;sim;sim
+49.3360543068157;14.0427591173442;49289;PI;Drhovle,,Domov důchodců;;bus;1;ddd = 2, pocet zast: 1
+49.2966026652167;14.1434169417583;26648;PI;Písek,,žel.st.;;bus;1;ddd = 2, pocet zast: 1
+49.4529021046269;14.3600350714855;21097;PI;Milevsko,,škola I;;bus;1;ddd = 3, pocet zast: 2
+49.4528361874953;14.35973834778;21097;PI;Milevsko,,škola I;;bus;1;ddd = 3, pocet zast: 2
+49.4529121271265;14.3617484078921;21093;PI;Milevsko,,poliklinika;;bus;1;ddd = 2, pocet zast: 1
+49.4565485888622;14.362831613117;47683;PI;Milevsko,,Petrovická;;bus;1;ddd = 2, pocet zast: 1
+49.555597408972;14.0506261871547;21309;PI;Mirovice,Řeteč;;bus;1;ddd = 2, pocet zast: 1
+49.0554552197944;13.7797901467974;67783;PT;Vimperk,,U kulturního střediska;;bus;1;ddd = 2, pocet zast: 1
+49.0258049097589;14.5024562500755;57392;CB;Borek,,Točna;;bus;1;ddd = 2, pocet zast: 1
+49.0123313302435;15.4523033668279;32889;JH;Staré Hobzí;;bus;1;ddd = 3, pocet zast: 2;ddd = 3, pocet zast: 2
