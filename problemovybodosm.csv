@@ -229,3 +229,5 @@ lat;lon;official_name;name;ref:CIS_JR;ref;bus;public_transport;count;id;local_re
 49.4155106;14.6839611;;"""Tábor, Stránského""";;;yes;platform;;3649979518;2;10;10
 49.4159609;14.6894183;;"""Tábor, Vožická Elektroizola""";;;yes;platform;;3651065499;1;10;10
 49.4162545;14.6905561;;"""Tábor, Vožická Elektroizola""";;;yes;platform;;3651064181;2;10;10
+49.4230120;14.7090340;"""Tábor, Záluží, škola""";Záluží škola;51354;;yes;platform;;3634343705;B;10;10;10;10
+49.4230937;14.7087457;"""Tábor, Záluží, škola""";Záluží škola;51354;;yes;platform;;10741509923;A;10;10;10;10
