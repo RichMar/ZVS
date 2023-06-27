@@ -39,14 +39,6 @@ def get_keys(bod_od, bod_osm, porov, dstan):
     pubtrans = ""
     bus = ""
     for x in bod_osm[2:]:
-        # if "Hosín" in x:
-        #     print("Hosín")
-        # if x == 3394620128:
-        #     print("Hosín")
-        # if str(x)=="3394620128":
-        #     print("Hosín")
-        # jm = ""
-        # refe = ""
         # official name
         if i == 2 and not x == "":
             if not x == bod_od[4] and porov < 0.11:
@@ -54,8 +46,10 @@ def get_keys(bod_od, bod_osm, porov, dstan):
                 problemovybodosm.append(bod_osm)
                 posl = len(problemovybodosm)-1
                 problemovybodosm.insert(posl, "2")
-            else:
-                jm = bod_od[4]
+            elif x == bod_od[4]:
+                jm = ""
+            # else:
+            #     jm = bod_od[4]
         elif i == 2 and x == "":
             jm = bod_od[4]
         # name
@@ -69,12 +63,21 @@ def get_keys(bod_od, bod_osm, porov, dstan):
             #     problemovybodosm.append(bod_osm)
             #     posl = len(problemovybodosm) - 1
             #     problemovybodosm[posl].append("3")
-            if porov > 0.11:
+            if porov > 0.11 and not porov == 1:
                 jm = bod_od[4]
             elif x == bod_od[5]:
-                jm = bod_od[4]
+                if not bod_osm[2].replace('"', "") == bod_od[4]:
+                    jm = bod_od[4]
+                else:
+                    jm = ""
+
+            if porov == 1:
+                jm = ""
         elif i == 3 and x == "" and bod_od[5] == "":
-            jm = bod_od[4]
+            if not bod_osm[2].replace('"', "") == bod_od[4]:
+                jm = bod_od[4]
+            else:
+                jm = ""
 
 
         # elif i == 3 and x == "" and not bod_od[5] == "":
@@ -113,6 +116,9 @@ def get_keys(bod_od, bod_osm, porov, dstan):
             # locref = bod_od[5]
             locref = dstan
         i += 1
+
+        if not jm == "":
+            print("kuku")
 
         # edittag = "node;" + bod_osm[9] + ";" + jm + ";" + refe
         # edittag[0] = "node"
@@ -199,7 +205,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
                     # name 3 a official name 2
                     # if not xx[3] == "" or not xx[2] == "":
                     if not xx[2] == "" or not xx[3] == "":
-                        s = difflib.SequenceMatcher(None, xx[2], doficialname)
+                        s = difflib.SequenceMatcher(None, xx[2].replace('"',""), doficialname)
                         similarity = s.ratio()
                         if similarity < 0.11:
                             s = difflib.SequenceMatcher(None, xx[3], doficialname)
