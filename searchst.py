@@ -551,7 +551,25 @@ bezdupl_list = deduplicate(chybejicisinglzast_list, 0)
 bezdupl_josm = deduplicate(josm, 1)
 bezdupl_problemovazast = deduplicate(problemovazast, 0)
 bezdupl_problemovybodosm = deduplicate(problemovybodosm, 0)
-bezdupl_autnadr =  deduplicate(autnadr, 0)
+bezdupl_autnadr = deduplicate(autnadr, 0)
+
+# [item for item in bezdupl_josm if not item == ""]
+# vztvoří seznam bez prázných řádku
+u = 0
+josmdataitem = []
+for x in bezdupl_josm:
+        prazdne = 1
+        for y in range(2, 7):
+                # prazdne = 1
+                if not x[y] == "":
+                        prazdne = 0
+                        # print(str(x[y]))
+
+        if prazdne == 0:
+                josmdataitem.append(x)
+                u += 1
+
+
 print("Total items in original chybejicisinglzast_list :", len(chybejicisinglzast_list))
 print("Total items after deduplication bezdupl_list:", len(bezdupl_list))
 print("Total items in original josm :", len(josm))
@@ -561,6 +579,7 @@ print("Total items after deduplication bezdupl_autnadr:", len(bezdupl_autnadr))
 print("Ahoj")
 tisk_csv(bezdupl_list, "bezdupl_list", ["lat", "lon", "ref:CIS_JR", "official_name", "local_ref"])
 tisk_csv(bezdupl_josm, "bezdupl_josm", ["element", "id", "official_name", "ref:CIS_JR", "local_ref", "bus", "public_transport", "lat", "lon"])
+tisk_csv(josmdataitem, "josmdataitem", ["element", "id", "official_name", "ref:CIS_JR", "local_ref", "bus", "public_transport", "lat", "lon"])
 tisk_csv(bezdupl_problemovazast, "problemovazast", ["lat", "lon", "ref", "okres", "name", "stanoviste", "typ"])
 # bod_osm: 0)::lat, 1)::lon, 2)"official_name", 3)name, 4)"ref:CIS_JR", 5)"ref", 6)"bus", 7)"public_transport",8)::count, 9)::id) 10)local_ref
 tisk_csv(bezdupl_problemovybodosm, "problemovybodosm", ["lat", "lon", "official_name", "name","ref:CIS_JR","ref",
