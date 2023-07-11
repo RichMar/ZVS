@@ -7,9 +7,10 @@ from copy import deepcopy
 import difflib
 from termcolor import colored
 from collections import Counter
-
 import pandas as pd
 import numpy as np
+import itertools
+import re
 
 bodydoplnkey = []
 edittag = [[] for i in range(4)]
@@ -256,7 +257,7 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
     minimum = min(vzdalenost)
     if minimum > limvzd:
         # chybejicisinglzast = [[] for i in range(4)]
-        chybejicisinglzast = ['']*5
+        chybejicisinglzast = ['']*8
         chybejicisinglzast[0] = []
         # chybejicisinglzast[0].append(lat)
         chybejicisinglzast[0] = dlat
@@ -271,35 +272,18 @@ def tridit(dlat, dlon, limvzd, dx, dn, dg, pocetz, ddata, dstan, doficialname, d
         chybejicisinglzast[3] = doficialname
         chybejicisinglzast[4] = []
         chybejicisinglzast[4] = dstan
+        chybejicisinglzast[5] = "yes"
+        chybejicisinglzast[6] = "platform"
+        chybejicisinglzast[7] = []
+        jmenoz = ''.join(ch for ch, _ in itertools.groupby(doficialname))
+        jmenoz = jmenoz.replace(",", ", ")
+        jmenoz = jmenoz.replace(".", ". ")
+        # jmenoz = re.sub(r'. $', '.', jmenoz, 1)
+        ttt = jmenoz.rsplit(". ", 1)
+        jmenoz = ".".join(ttt)
+        jmenoz = jmenoz.replace("rozc.1", "rozc. 1")
+        chybejicisinglzast[7] = jmenoz
         chybejicisinglzast_list.append(chybejicisinglzast[:])
-                    # dg = 1
-                    # pruchod = 0
-                    #
-                    # if ddn > 100:
-                    #     bezdupl_list = deduplicate(chybejicisinglzast_list, 0)
-                    #     bezdupl_josm = deduplicate(josm, 1)
-                    #     print("Total items in original josm :", len(josm))
-                    #     print("Total items after deduplication bezdupl_josm:", len(bezdupl_josm))
-                    #     print("Total items in original chybejicisinglzast_list :", len(chybejicisinglzast_list))
-                    #     print("Total items after deduplication bezdupl_list:", len(bezdupl_list))
-
-                        # df = pd.DataFrame(data=chybejicisinglzast_list,
-                        #                   columns=['lat', 'lon', 'ref',  "name"], dtype='string')
-                        # df = pd.Series(data=chybejicisinglzast_list)
-                        # before = df.dtypes
-                        # df[:].astype('string')
-                        # after = df.dtypes
-
-
-
-                        # df.iloc[df.astype('string').drop_duplicates().index]
-                        # df.iloc[df.drop_duplicates().index]
-                        # df.drop_duplicates(keep='first')
-
-                        # set(tuple(element) for element in chybejicisinglzast_list)
-                        # [list(t) for t in set(tuple(element) for element in chybejicisinglzast_list)]
-                        # *y, = map(list, {*map(tuple, chybejicisinglzast_list)})
-                        # print(y)
 
 
     return ddn
@@ -577,7 +561,7 @@ print("Total items after deduplication bezdupl_josm:", len(bezdupl_josm))
 print("Total items in original autnadr :", len(autnadr))
 print("Total items after deduplication bezdupl_autnadr:", len(bezdupl_autnadr))
 print("Ahoj")
-tisk_csv(bezdupl_list, "bezdupl_list", ["lat", "lon", "ref:CIS_JR", "official_name", "local_ref"])
+tisk_csv(bezdupl_list, "bezdupl_chybejicisinglzast_list", ["lat", "lon", "ref:CIS_JR", "official_name", "local_ref", "bus", "public_transport", "name"])
 tisk_csv(bezdupl_josm, "bezdupl_josm", ["element", "id", "official_name", "ref:CIS_JR", "local_ref", "bus", "public_transport", "lat", "lon"])
 tisk_csv(josmdataitem, "josmdataitem", ["element", "id", "official_name", "ref:CIS_JR", "local_ref", "bus", "public_transport", "lat", "lon"])
 tisk_csv(bezdupl_problemovazast, "problemovazast", ["lat", "lon", "ref", "okres", "name", "stanoviste", "typ"])
