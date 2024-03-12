@@ -14,7 +14,7 @@ Výstupní soubory:
                  
 Pozn: při prohlížení dat jsem zjistil, že existují zdvojené zastávky, kdy zastávka má stejnou souřadnic, ale jiné referenční číslo.
 
-**searchst.py** - vytvoří dotaz pro overpass turbo pro autobusové zastávky v JCK *"highway"="bus_stop"*.
+**searchst.py** - vytvoří dotaz pro overpass turbo pro autobusové zastávky v JCK [*"highway"="bus_stop"*](https://wiki.openstreetmap.org/wiki/Cs:Tag:highway%3Dbus_stop).
 Výstupní data obsahují, souřadnice lat, lon a klíče: official_name, name, ref:CIS_JR, ref, bus, public_transport, count, id, local_ref.
 
 Následně se načtou data od JČK, ve kterých se hledají zastávky se stejným ref. Pokud je zastávek se stejným ref více jak 4, uloží se tyto 
